@@ -19,3 +19,7 @@ img, svg, picture, video{
   display: block;
   max-width: 100%;
 }
+
+:root{
+  --bg-clr-deep-blue: #00214B;
+}
