@@ -2,9 +2,9 @@ import './Footer.css'
 
 const Footer = () => {
   return(
-    <footer className="footer-container">
+    <footer className="footer-container footer-grid text-center align-center">
       <h2 className='footer__title'>MyB<span className='footer__title__o'>o</span>ya</h2>
-      <section className='footer__info'>
+      <section className='footer__info align-center'>
         <p className='footer__info__title'>Síguenos</p>
         <div>
           <a href=""></a>
