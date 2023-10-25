@@ -1,0 +1,84 @@
+
+
+
+
+
+.header {
+    background-color: #032D59;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 120px;
+    padding: 5px 10%;
+}
+
+.header .logoNav {
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.header .logoNav img {
+    height: 90px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.header .logoNav img:hover {
+    transform: scale(1.2);
+}
+
+.header .listaNav {
+    list-style: none;
+}
+
+.header .listaNav li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.header .listaNav li:hover {
+    transform: scale(1.1);
+}
+
+.header .listaNav a {
+    font-size: 700;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header .listaNav li a:hover {
+    color: #FF8C00;
+}
+
+.header .btn button {
+    margin-left: 20px;
+    font-weight: 700;
+    color: white;
+    padding: 9px 25px;
+    background-color: #FF8C00;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .btn button:hover { 
+    transform: scale(1.1);
+}
+
+.header .btn2 button {
+    margin-left: 20px;
+    font-weight: 700;
+    color: black;
+    padding: 9px 25px;
+    background-color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .btn2 button:hover { 
+    transform: scale(1.1);
+}
