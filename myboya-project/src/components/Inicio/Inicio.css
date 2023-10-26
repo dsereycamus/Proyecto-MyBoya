@@ -1,0 +1,43 @@
+.pagina-inicio{
+background-color: #032D59;
+/* background: url(../../assets/Images/ballenatriste.png); */
+height: 100vh;
+padding: 370px 235px;
+}
+
+.inicio-block-1{
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+width: 810px;
+}
+
+.inicio-block-1 p{
+font-family: 'Roboto Light', sans-serif;
+font-size: 30px;
+color: white;
+}
+
+.inicio-block-1 h1{
+font-size: 60px;
+font-family: 'Roboto Medium', sans-serif;
+color:white;
+}
+
+.inicio-block-1 button{
+background-color: #ff8c00;
+width: 220px;
+font-size: 22px;
+text-align: center;
+padding: auto;
+border-radius: 50px;
+}
+
+.inicio-block-2 p{
+font-family: 'NATS', sans-serif;
+font-size: 28px;
+color: white;
+text-align: center;
+line-height: 25px;
+margin-top: 640px;
+}
