@@ -6,7 +6,11 @@
 .footer-container{
   background: var(--clr-deep-blue);
   padding-bottom: var(--p-md, 2.75rem);
-
+}
+.footer__social{
+  display:flex;
+  width: 65%;
+  justify-content: space-around;
 }
 .footer__info{
   display: grid;
@@ -30,6 +34,9 @@
   cursor: pointer;
   font-size: var(--font-md, 1.325rem);
   font-weight: var(--font-w-md, 500);
+}
+.footer__adress__a > img{
+  display: inline-block;
 }
 .footer__copy{
   font-size: var(--font-md, 1.325rem);
