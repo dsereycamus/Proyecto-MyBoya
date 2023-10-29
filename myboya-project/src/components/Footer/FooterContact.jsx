@@ -1,8 +1,8 @@
 const FooterContact = ({mail}) => {
   return (
-    <>
+    <div className="footer__social__container footer__contact__container">
       <p className="footer__info__title">Contacto</p>
-      <address className="footer__adress flex-row-center align-center text-center">
+      <address className="footer__adress">
         <a href="mailto:myboya@gmail.com" className="footer__adress__a">
           <img
             src={mail}
@@ -12,7 +12,7 @@ const FooterContact = ({mail}) => {
           myboya@gmail.com
         </a>
       </address>
-    </>
+    </div>
   );
 };
 

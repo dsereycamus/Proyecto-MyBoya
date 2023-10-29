@@ -1,11 +1,18 @@
 .footer-grid{
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(2, .8fr);
 }
 .footer-container{
   background: var(--clr-deep-blue);
-  padding-bottom: var(--p-md, 2.75rem);
+  color: var(--clr-white, #FFFFFF);
+}
+.footer__social__container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
 .footer__social{
   display:flex;
@@ -15,12 +22,14 @@
 .footer__info{
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(5, .7fr);
+}
+.footer__contact__container{
+  grid-row: 3 / 4;
 }
 .footer__title{
   font-size: var(--font-xxl, 4rem);
   font-weight: var(--font-semibold, 700);
-  color: var(--clr-white, #FFFFFF)
 }
 .footer__title__o{
   color: var(--clr-orange, #FF8C00);
@@ -34,6 +43,10 @@
   cursor: pointer;
   font-size: var(--font-md, 1.325rem);
   font-weight: var(--font-w-md, 500);
+  
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 .footer__adress__a > img{
   display: inline-block;
@@ -41,4 +54,5 @@
 .footer__copy{
   font-size: var(--font-md, 1.325rem);
   font-weight: lighter;
+  grid-row: 5 / 6;
 }

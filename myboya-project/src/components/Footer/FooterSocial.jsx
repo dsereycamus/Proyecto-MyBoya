@@ -1,7 +1,8 @@
 const FooterSocial = (props) => {
 const {fb,x,insta} = props
   return (
-    <div className="footer__social__container flex-row-center">
+    <div className="footer__social__container ">
+      <p className='footer__info__title'>Síguenos</p>
       <div className="footer__social">
         <a href="">
           <img src={fb} alt="Icono de Facebook." className="icon__social" />
