@@ -1,10 +1,11 @@
 .footer-grid{
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, .8fr);
+  grid-template-rows: 12rem 38.3rem;
+  position: relative;
 }
 .footer-container{
-  background: var(--clr-deep-blue);
+  background: var(--clr-blue);
   color: var(--clr-white, #FFFFFF);
 }
 .footer__social__container{
@@ -12,7 +13,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.25rem;
+  z-index: 1;
+}
+.social__grid{
+  grid-row: 2/3;
+}
+.footer__contact__container{
+  grid-row: 4 / 5;
+}
+.footer__copy{
+  grid-row:6 / 7;
 }
 .footer__social{
   display:flex;
@@ -22,11 +33,26 @@
 .footer__info{
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(5, .7fr);
+  grid-template-rows: repeat(7, 1fr);
+  position: relative;
+  overflow: hidden;
 }
-.footer__contact__container{
-  grid-row: 3 / 4;
+.footer__info::before{
+  content: '';
+  width: 25rem;
+  height: 25rem;
+  background: no-repeat center/100% url(../../assets/Images/halo.png);
+  position: absolute;
+  top: 5%;
+  z-index: 0;
+  animation: 20s linear infinite halo-footer;
 }
+@keyframes halo-footer {
+  100%{
+    transform: rotatez(360deg);
+  }
+}
+
 .footer__title{
   font-size: var(--font-xxl, 4rem);
   font-weight: var(--font-semibold, 700);
@@ -54,5 +80,35 @@
 .footer__copy{
   font-size: var(--font-md, 1.325rem);
   font-weight: lighter;
-  grid-row: 5 / 6;
+  position: relative;
+}
+.footer__copy::after{
+  content: '';
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+  top: 25%;
+  right: -10%;
+  background: no-repeat center/100% url(../../assets/Images/alga1.png);
+  animation: 3s ease-in-out infinite alga1;
+}
+.footer__copy::before{
+  content: '';
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+  top: 25%;
+  left: -12%;
+  background: no-repeat center/100% url(../../assets/Images/alga2rev.png); 
+  animation: 3s ease-in-out infinite alga2;
+}
+@keyframes alga1 {
+  50%{
+    transform: rotatez(2deg);
+  }
+}
+@keyframes alga2 {
+  50%{
+    transform: rotatez(-2deg);
+  }
 }

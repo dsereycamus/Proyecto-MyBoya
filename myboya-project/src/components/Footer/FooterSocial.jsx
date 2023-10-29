@@ -1,7 +1,7 @@
 const FooterSocial = (props) => {
 const {fb,x,insta} = props
   return (
-    <div className="footer__social__container ">
+    <div className="footer__social__container social__grid">
       <p className='footer__info__title'>Síguenos</p>
       <div className="footer__social">
         <a href="">
