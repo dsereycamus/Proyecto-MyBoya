@@ -24,6 +24,7 @@ img, svg, picture, video{
   /* COLORS */
   --clr-white: #FFFFFF;
   --clr-orange: #FF8C00;
+  --clr-blue: #032D59;
   --clr-deep-blue: #00214B;
   /* FONTS */
   --font-xxl: 4rem;
@@ -43,4 +44,11 @@ img, svg, picture, video{
 }
 .align-center{
   align-items: center;
+}
+.icon__social{
+  max-width: 2.25rem;
+}
+.flex-row-center{
+  display: flex;
+  justify-content: center;
 }
