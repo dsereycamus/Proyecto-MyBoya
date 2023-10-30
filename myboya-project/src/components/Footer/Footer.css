@@ -1,8 +1,13 @@
 .footer-grid{
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 12rem 38.3rem;
+  grid-template-rows: 10rem 22.4rem;
   position: relative;
+}
+@media (min-width: 375px) {
+  .footer-grid{
+    grid-template-rows: 10rem 22.4rem;
+  }
 }
 .footer-container{
   background: var(--clr-blue);
@@ -16,34 +21,30 @@
   gap: 1.25rem;
   z-index: 1;
 }
-.social__grid{
-  grid-row: 2/3;
-}
-.footer__contact__container{
-  grid-row: 4 / 5;
-}
-.footer__copy{
-  grid-row:6 / 7;
-}
+
 .footer__social{
   display:flex;
-  width: 65%;
+  min-width: 275px;
+  max-width: 340px;
   justify-content: space-around;
+  position: relative;
 }
 .footer__info{
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(7, 1fr);
-  position: relative;
+  grid-template-rows: repeat(3, 1fr);
+  gap:3rem;
   overflow: hidden;
 }
-.footer__info::before{
+
+.footer__social::before{
   content: '';
-  width: 25rem;
-  height: 25rem;
+  width: 18rem;
+  height: 18rem;
   background: no-repeat center/100% url(../../assets/Images/halo.png);
   position: absolute;
-  top: 5%;
+  top: -150%;
+  right: -4%;
   z-index: 0;
   animation: 20s linear infinite halo-footer;
 }
@@ -52,7 +53,28 @@
     transform: rotatez(360deg);
   }
 }
-
+@media (min-width: 360px) {
+  .footer__social::before{
+    top: -150%;
+  }
+}
+@media (min-width: 400px) {
+  .footer__social::before{
+    width: 20rem;
+    height: 20rem;
+    left: -6%;
+  }
+}
+.social__grid{
+  grid-row: 1/2;
+}
+.footer__contact__container{
+  grid-row: 2/ 3;
+}
+.footer__copy{
+  grid-row: 3 / 4;
+  align-self: self-start;
+}
 .footer__title{
   font-size: var(--font-xxl, 4rem);
   font-weight: var(--font-semibold, 700);
@@ -81,6 +103,7 @@
   font-size: var(--font-md, 1.325rem);
   font-weight: lighter;
   position: relative;
+  z-index: 1;
 }
 .footer__copy::after{
   content: '';
@@ -101,6 +124,7 @@
   left: -12%;
   background: no-repeat center/100% url(../../assets/Images/alga2rev.png); 
   animation: 3s ease-in-out infinite alga2;
+  z-index: -1;
 }
 @keyframes alga1 {
   50%{
