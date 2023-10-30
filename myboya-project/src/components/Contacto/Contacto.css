@@ -21,7 +21,7 @@ body{
 
 .form-text {
     width: 25%; 
-    padding: 20px;
+    padding: 1.25rem;
     margin-left: 200px ;
 }
 
@@ -37,7 +37,7 @@ color: #FF8C00;
     width: 35%;
     display: flex; 
     justify-content: flex-start;
-    padding: 65px;
+    padding: 4rem;
 }
 
 form {
@@ -48,7 +48,7 @@ form {
 label {
     font-size: 17px; 
     color: #ffffff; 
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
 }
 
 input, textarea {
@@ -95,7 +95,7 @@ input, textarea {
 
     .form-text {
         width: 100%; 
-        margin: 0 10px 0 10px;
+        margin: 0 0.625rem 0 0.625rem;
     }
 
     .form-content {
