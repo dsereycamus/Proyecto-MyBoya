@@ -1,15 +1,11 @@
 
-
-
-
-
 .header {
     background-color: #032D59;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 120px;
-    padding: 5px 10%;
+    height: 7.5rem;
+    padding: 0.3rem 10%;
 }
 
 .header .logoNav {
@@ -18,7 +14,7 @@
 }
 
 .header .logoNav img {
-    height: 90px;
+    height: 5.6rem;
     width: auto;
     transition: all 0.3s;
 }
@@ -33,7 +29,7 @@
 
 .header .listaNav li {
     display: inline-block;
-    padding: 0 20px;
+    padding: 0 1.25rem;
 }
 
 .header .listaNav li:hover {
@@ -51,30 +47,30 @@
     color: #FF8C00;
 }
 
-.header .btn button {
-    margin-left: 20px;
+.header .btn3 button {
+    margin-left: 1.25rem;
     font-weight: 700;
     color: white;
-    padding: 9px 25px;
+    padding: 0.5rem 1.5rem;
     background-color: #FF8C00;
     border: none;
-    border-radius: 50px;
+    border-radius: 3rem;
     cursor: pointer;
     transition: all 0.3s ease 0s;
-}
+} 
 
-.header .btn button:hover { 
+.header .btn3 button:hover { 
     transform: scale(1.1);
 }
 
 .header .btn2 button {
-    margin-left: 20px;
+    margin-left: 1.25rem;
     font-weight: 700;
     color: black;
-    padding: 9px 25px;
+    padding: 0.5rem 1.5rem;
     background-color: white;
     border: none;
-    border-radius: 50px;
+    border-radius: 3rem;
     cursor: pointer;
     transition: all 0.3s ease 0s;
 }

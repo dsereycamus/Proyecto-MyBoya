@@ -17,7 +17,7 @@ const Navbar = () => {
                 </ul>
             </nav>
             <a href="" className="btn2"><button>Inicio sesión</button></a>
-            <a href="" className="btn"><button>¡Regístrate!</button></a>
+            <a href="" className="btn3"><button>¡Regístrate!</button></a>
         </header>
     )
 }
