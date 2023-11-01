@@ -1,0 +1,56 @@
+*,*::before,*::after{
+  box-sizing: border-box;
+}
+*{
+  margin: 0;
+  padding: 0;
+  font:inherit;
+}
+
+body{
+  min-height: 100vh;
+}
+
+html{
+  color-scheme: dark light;
+}
+
+img, svg, picture, video{
+  display: block;
+  max-width: 100%;
+}
+
+:root{
+  /* COLORS */
+  --clr-white: #FFFFFF;
+  --clr-orange: #FF8C00;
+  --clr-blue: #032D59;
+  --clr-deep-blue: #00214B;
+  /* FONTS */
+  --font-xxl: 4rem;
+  --font-lg: 1.725rem;
+  --font-md: 1.325rem;
+  --font-normal: 1rem;
+  --font-sm: .75rem;
+}
+
+@font-face {
+  font-family: 'NATS';
+  src: url(/myboya-project/src/assets/fonts/NATS-Regular.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+
+.text-center{
+  text-align: center;
+}
+.align-center{
+  align-items: center;
+}
+.icon__social{
+  max-width: 2.25rem;
+}
+.flex-row-center{
+  display: flex;
+  justify-content: center;
+}
