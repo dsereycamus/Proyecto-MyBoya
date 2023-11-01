@@ -30,6 +30,8 @@ img, svg, picture, video{
   --font-xxl: 4rem;
   --font-lg: 1.725rem;
   --font-md: 1.325rem;
+  --font-normal: 1rem;
+  --font-sm: .75rem;
 }
 
 @font-face {

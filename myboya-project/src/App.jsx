@@ -8,6 +8,7 @@ function App() {
   return (
     <div>
       <Inicio />
+      <Footer />
 
     </div>
   
