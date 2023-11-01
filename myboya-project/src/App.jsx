@@ -1,9 +1,9 @@
-import React from 'react'
-import './App.css'
-import Inicio from './components/Inicio/Inicio'
-import Footer from './components/Footer/Footer'
-import Navbar from './components/Navbar/Navbar'
-import Contacto from './components/Contacto/Contacto'
+import React from "react";
+import "./App.css";
+import Inicio from "./components/Inicio/Inicio";
+import Footer from "./components/Footer/Footer";
+import Navbar from "./components/Navbar/Navbar";
+import Contacto from "./components/Contacto/Contacto";
 
 function App() {
   return (
@@ -12,10 +12,8 @@ function App() {
       {/* <Inicio /> */}
       <Contacto />
       <Footer />
-
     </div>
-  
-  )
+  );
 }
 
-export default App
+export default App;
