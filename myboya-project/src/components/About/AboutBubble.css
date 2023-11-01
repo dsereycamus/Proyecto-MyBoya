@@ -1,0 +1,10 @@
+.card-about{ 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: .75rem;
+}
+.card-about__title{
+  font-size: var(--font-lg, 2rem);
+}
