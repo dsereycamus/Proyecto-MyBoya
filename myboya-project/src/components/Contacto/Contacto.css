@@ -5,12 +5,12 @@
 }
 
 body {
-  background-color: #032d59;
+  background-color: var(--clr-blue, #032d59);
 }
 
 .title-contact {
   font-family: "NATS";
-  font-size: 35px;
+  font-size: 50px;
 }
 p {
   font-family: "Roboto regular", sans-serif;
@@ -40,7 +40,8 @@ p {
 
 .form-text {
   width: 25%;
-  padding: 20px;
+  padding-left: 200px;
+
 }
 
 .white-text {
@@ -56,6 +57,7 @@ p {
   top: 10%;
   right: 5%;
   width: 200px;
+  animation: moveLeftRight 6s ease-in-out infinite;
 }
 
 .form-content {
@@ -107,6 +109,7 @@ textarea {
   background-color: #f0a951;
 }
 
+
 @media (max-width: 844px) {
   .form-container {
     flex-direction: column;
@@ -129,5 +132,18 @@ textarea {
 
   .form-content {
     width: 100%;
+  }
+}
+
+
+@keyframes moveLeftRight {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px); 
+  }
+  100% {
+    transform: translateX(0);
   }
 }
