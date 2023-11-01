@@ -1,7 +1,12 @@
-const AboutBubble = () => {
+const AboutBubble = ({img, name}) => {
     return(
-        <div>
-
+        <div className="bubble">
+            <img src={img} alt={name} />
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     )
 }
