@@ -1,104 +1,134 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-color: #032D59;
+body {
+  background-color: #032d59;
+}
+
+.title-contact {
+  font-family: "NATS";
+  font-size: 35px;
+}
+p {
+  font-family: "Roboto regular", sans-serif;
 }
 
 .container {
-    display: flex;
-    justify-content: flex-end; 
+  display: flex;
+  justify-content: flex-end;
 }
 
 .form-container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-image: url("../../assets/Images/fondo-contacto.png");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position-y: bottom;
+}
+
+.halo-image {
+  position: absolute;
+  top: 3%;
+  left: 10%;
+  width: 750px;
 }
 
 .form-text {
-    width: 25%; 
-    padding: 1.25rem;
-    margin-left: 200px ;
+  width: 25%;
+  padding: 20px;
+  margin-left: 200px;
 }
 
 .white-text {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .orange-text {
-color: #FF8C00;
+  color: var(--clr-orange, #ff8c00);
+}
+
+.bag-image {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  width: 200px;
 }
 
 .form-content {
-    width: 35%;
-    display: flex; 
-    justify-content: flex-start;
-    padding: 4rem;
+  width: 35%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 55px;
+  padding-right: 600px;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 label {
-    font-size: 17px; 
-    color: #ffffff; 
-    margin-bottom: 0.625rem;
+  font-size: 17px;
+  color: #ffffff;
+  margin-bottom: 0.625rem;
 }
 
-input, textarea {
-    padding: 17px 14px;
-    background-color:#032D59; 
-    border: 1px solid white;
-    font-size: 15px;
-    color:#F4F6F9;
-    margin-bottom: 20px;
-    border-radius: 25px;
+input,
+textarea {
+  padding: 17px 14px;
+  background-color: var(--clr-blue, #032d59);
+  border: 1px solid white;
+  font-size: 15px;
+  color: #f4f6f9;
+  margin-bottom: 20px;
+  border-radius: 25px;
 }
 
 :focus {
-    outline: 1px solid #FF8C00;
- }
-
- .btn {
-    width: 140px;
-    height: 30px;
-    background-color: #FF8C00;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 0 auto;
+  outline: 1px solid var(--clr-orange, #ff8c00);
 }
-  
- .btn:hover {
-    background-color: #f0a951;
+
+.btn {
+  width: 140px;
+  height: 30px;
+  background-color: var(--clr-orange, #ff8c00);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 auto;
 }
-    
 
-
-@media(max-width:844px){
-    .form-container {
-        flex-direction: column; 
-    }
+.btn:hover {
+  background-color: #f0a951;
 }
 
 @media (max-width: 844px) {
-    .form-container {
-        flex-direction: column; 
-    }
+  .form-container {
+    flex-direction: column;
+  }
+}
 
-    .form-text {
-        width: 100%; 
-        margin: 0 0.625rem 0 0.625rem;
-    }
+.form-text {
+  width: 100%;
+  margin: 0 0.625rem 0 0.625rem;
+}
 
-    .form-content {
-        width: 100%; 
-    }
+@media (max-width: 844px) {
+  .form-container {
+    flex-direction: column;
+  }
+  .form-text {
+    width: 100%;
+    margin: 0 10px 0 10px;
+  }
+
+  .form-content {
+    width: 100%;
+  }
 }
