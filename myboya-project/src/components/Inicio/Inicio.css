@@ -1,6 +1,6 @@
 .pagina-inicio{
 background-color: #032D59;
-/* background: url(../../assets/Images/ballenatriste.png); */
+height: 100vh;
 padding: 370px 235px;
 }
 
@@ -8,6 +8,7 @@ padding: 370px 235px;
 display: flex;
 flex-direction: column;
 flex-wrap: wrap;
+width: 810px;
 }
 
 .inicio-block-1 p{
@@ -24,60 +25,18 @@ color:white;
 
 .inicio-block-1 button{
 background-color: #ff8c00;
-color: black;
-font-family: 'NATS';
 width: 220px;
-font-size: 24px;
+font-size: 22px;
 text-align: center;
 padding: auto;
 border-radius: 50px;
 }
 
-.inicio-block-2 {
+.inicio-block-2 p{
 font-family: 'NATS', sans-serif;
 font-size: 28px;
 color: white;
 text-align: center;
-justify-content: center;
 line-height: 25px;
-}
-
-.inicio-block-2-2{
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-}
-
-.inicio-block-2-2 div{
-width: 12.5em;
-padding: 1em;
-background-color: rgba(0, 78, 151, 0.9);
-margin: 0.5em auto;
-border-radius: 15%;
-text-align: left;
-justify-content: center;
-align-items: center;
-}
-
-.inicio-block-2-2 div img{
-margin: 0.2em auto;
-}
-
-@media screen and (max-width: 992px){
-    .pagina-inicio{
-    padding: 370px 1em;
-    }
-    .inicio-block-1{
-    margin: 1em;
-    justify-content: center;
-    align-items: center;
-    }
-    .inicio-block-1 h1{
-    font-size: 20px;
-    }
-    .inicio-block-2-2 div{
-    font-size: 20px;
-    justify-content: center;
-    align-items: center;
-    }
+margin-top: 640px;
 }
