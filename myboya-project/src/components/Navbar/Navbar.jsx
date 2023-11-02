@@ -1,22 +1,23 @@
-import logo from "../../../public/myboya-logo.png"
+import logo from "../../assets/Icons/logobg.png"
 import './Nav.css'
+import { NavLink, Link } from 'react-router-dom'
 
 const Navbar = () => {
     return (
         <header className="header">
             <div className="logoNav">
-                <img src={ logo } alt="Logo MyBoya" />
+                <Link to='/'><img src={ logo } alt="Logo MyBoya" /></Link>
             </div>
             <nav>
                 <ul className="listaNav">
-                    <li><a href="">Inicio</a></li>
-                    <li><a href="">Nosotros</a></li>
-                    <li><a href="">Partner</a></li>
-                    <li><a href="">Noticias</a></li>
-                    <li><a href="">Contáctanos</a></li>
+                    <li><NavLink to ='/'>Inicio</NavLink></li>
+                    <li><NavLink to ='/about'>Nosotros</NavLink></li>
+                    <li><>Partners</></li>
+                    <li><NavLink to ='/playground'>Noticias</NavLink></li>
+                    <li><NavLink to='/contacto' >Contacto</NavLink></li>
                 </ul>
             </nav>
-            <a href="" className="btn2"><button>Inicio sesión</button></a>
+            <Link to='/sesion' className="btn2"><button>Inicio sesión</button></Link>
             <a href="" className="btn3"><button>¡Regístrate!</button></a>
         </header>
     )
