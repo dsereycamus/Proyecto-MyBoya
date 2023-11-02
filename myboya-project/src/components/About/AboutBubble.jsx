@@ -6,7 +6,7 @@ const AboutBubble = ({ img, name }) => {
   return (
     <>
       <article className="card-about">
-        <h2 className="card-about__title">{name}</h2>
+        <h3 className="card-about__title">{name}</h3>
         <Bubble img={img} name={name} />
         <div className="card-about__info">
           <h3>Cargo: </h3>

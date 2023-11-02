@@ -6,5 +6,5 @@
   gap: .75rem;
 }
 .card-about__title{
-  font-size: var(--font-lg, 2rem);
+  font-size: var(--font-lg, 1.725rem);
 }
