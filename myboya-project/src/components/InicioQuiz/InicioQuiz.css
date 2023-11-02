@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding:0;
+
+}
+body {
+    background-color: #032D59;
+}
+
+.container{
+    background-color: #032D59;
+    padding: none;
+
+
+}
+.InicioQuiz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+
+
+}
+
+
+.btn{
+    text-align: center;
+    padding: auto;
+    border-radius: 60px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.btnplay, .btnwho {
+    margin: 5px;
+}
+
+.insignia img, .ranking img{
+    margin: 20px;
+}
+
+.btnplay {
+    background-color: #ff8c00;
+    width: 586px;
+    height: 141px;
+    text-align: center;
+    padding: auto;
+    border-radius: 40px;
+    justify-content: center;
+    align-items: center; /*Flex o Grid*/
+}
+
+.btnwho{
+    background-color: whitesmoke;
+    width: 586px;
+    height: 68px;
+    text-align: center;
+    padding: auto;
+    border-radius: 60px;
+    justify-content: center;
+    align-items: center;
+    color: black;
+
+}
+
+
+.rank {
+    display: flex;
+    background: hsl(85, 85, 85);
+    flex-direction: column;
+    justify-content: right;
+    align-items: end;
+    text-align: center;
+    margin: 90px;
+}
+
+.ranking {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 22px;
+    padding: 1em 0.25em;
+
+}
+
+.insignia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 22px;
+    padding: 1em 0.25em;
+}
+
+.ranking img{
+    width: 75px;
+    height: 75px;
+
+}
+.insignia img{
+    width: 75px;
+    height: 75px;
+}
