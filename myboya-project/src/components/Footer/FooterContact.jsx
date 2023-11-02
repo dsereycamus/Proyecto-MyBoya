@@ -9,7 +9,7 @@ const FooterContact = ({mail}) => {
             alt="Icono de carta para el contacto."
             className="icon__social"
           />{" "}
-          myboya@gmail.com
+          myboyaproject@gmail.com
         </a>
       </address>
     </div>
