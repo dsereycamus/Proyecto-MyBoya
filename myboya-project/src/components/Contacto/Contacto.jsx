@@ -5,6 +5,9 @@ import { toast } from "react-toastify";
 import "./Contacto.css";
 import bolsa from "../../assets/Images/bolsa1.png";
 import halo from "../../assets/Images/halo.png";
+import cuchara from "../../assets/Images/cuchara.png";
+import tenedor from "../../assets/Images/tenedor.png";
+import fondo from "../../assets/Images/fondocontacto.png";
 
 const Contacto = () => {
   const form = useRef();
@@ -64,6 +67,9 @@ const Contacto = () => {
 
         <div className="form-content">
           <img src={bolsa} className="bag-image" alt="Bolsa" />
+          <img src={cuchara} className="cuchara-image" alt="cuchara" />
+          <img src={tenedor} className="tenedor-image" alt="tenedor" />
+        
           <form ref={form} onSubmit={sendEmail}>
             <label htmlFor="name">Nombre:</label>
             <input type="text" name="user_name" id="name" />
@@ -80,8 +86,10 @@ const Contacto = () => {
             <button className="btn" type="submit">
               Enviar
             </button>
+           
           </form>
         </div>
+        <img src={fondo} className="fondocontacto-mobile" alt="Halo" />
       </div>
     </div>
   );
