@@ -1,42 +1,127 @@
 .pagina-inicio{
-background-color: #032D59;
-height: 100vh;
-padding: 370px 235px;
-}
-
-.inicio-block-1{
-display: flex;
-flex-direction: column;
-flex-wrap: wrap;
-width: 810px;
-}
-
-.inicio-block-1 p{
-font-family: 'Roboto Light', sans-serif;
-font-size: 30px;
-color: white;
-}
-
-.inicio-block-1 h1{
-font-size: 60px;
-font-family: 'Roboto Medium', sans-serif;
-color:white;
-}
-
-.inicio-block-1 button{
-background-color: #ff8c00;
-width: 220px;
-font-size: 22px;
-text-align: center;
-padding: auto;
-border-radius: 50px;
-}
-
-.inicio-block-2 p{
-font-family: 'NATS', sans-serif;
-font-size: 28px;
-color: white;
-text-align: center;
-line-height: 25px;
-margin-top: 640px;
-}
+    background-color: #032D59;
+    padding: 370px 235px;
+    }
+    
+    .inicio-block-1{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    }
+    
+    .inicio-block-1 p{
+    font-family: 'Roboto Light', sans-serif;
+    font-size: 30px;
+    color: white;
+    }
+    
+    .inicio-block-1 h1{
+    font-size: 60px;
+    font-family: 'Roboto Medium', sans-serif;
+    color:white;
+    }
+    
+    .inicio-block-1 button, .btn-crearcuenta{
+    background-color: #ff8c00;
+    color: black;
+    font-family: 'NATS';
+    width: 220px;
+    font-size: 24px;
+    text-align: center;
+    padding: auto;
+    border: none;
+    border-radius: 50px;
+    }
+    
+    .inicio-block-2 {
+    font-family: 'NATS', sans-serif;
+    font-size: 28px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    line-height: 25px;
+    }
+    
+    /*.inicio-block-2 h3{
+    falta agregar espacio arriba de ayuda al planeta jugando y aprendiendo
+    }*/
+    
+    
+    .inicio-block-2-2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    }
+    
+    .inicio-block-2-2 div{
+    width: 12.5em;
+    padding: 1em;
+    background-color: rgba(0, 78, 151, 0.9);
+    margin: 0.5em auto;
+    border-radius: 15%;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    .inicio-block-2-2 div img{
+    margin: 0.2em auto;
+    }
+    
+    @media screen and (max-width: 992px){
+        .pagina-inicio{
+        padding: 370px 1em;
+        }
+        .inicio-block-1{
+        margin: 1em;
+        justify-content: center;
+        align-items: center;
+        }
+        .inicio-block-1 h1{
+        font-size: 20px;
+        }
+        .inicio-block-2-2 div{
+        font-size: 20px;
+        justify-content: center;
+        align-items: center;
+        }
+    }
+    
+    .inicio-block-3 h3{
+    color: white;
+    font-size: 40px;
+    }
+    
+    .inicio-block-3 h4{
+    color: white;
+    font-size: 30px;
+    }
+    
+    .mockup{
+    width: 500px;
+    align-items: right;
+    }
+    
+    .num-usuarios{
+    color: #ff8c00;
+    font-size: 100px;
+    text-align: right;
+    }
+    
+    .num-donacion{
+    color: #ff8c00;
+    font-size: 100px;
+    text-align: left;
+    }
+    
+    .num-usuarios-text{
+    color: white;
+    font-size: 30px;
+    text-align: right;
+    }
+    
+    .num-donacion-text{
+    color: white;
+    font-size: 30px;
+    text-align: left;
+    }
