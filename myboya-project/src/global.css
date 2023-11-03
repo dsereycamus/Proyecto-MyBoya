@@ -28,6 +28,7 @@ img, svg, picture, video{
   --clr-deep-blue: #00214B;
   /* FONTS */
   --font-xxl: 4rem;
+  --font-xl: 2.5rem;
   --font-lg: 1.725rem;
   --font-md: 1.2rem;
   --font-normal: 1rem;

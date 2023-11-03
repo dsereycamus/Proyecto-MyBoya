@@ -8,9 +8,6 @@ const About = () => {
   return (
     <main className="about-container">
       <h1 className="about__title">Quienes somos</h1>
-      <Vision />
-      <Mision />
-      <Team />
       <div className="about-magic">
         <span></span>
         <span></span>
@@ -18,6 +15,10 @@ const About = () => {
         <span></span>
         <span></span>
       </div>
+      <Vision />
+      <Mision />
+      <Team />
+      
     </main>
   );
 };

@@ -9,6 +9,10 @@ export const Team = () => {
     <section className="team">
         <h2 className="team__title">Nuestro equipo</h2>
         <AboutBubble img={daniela} name="Daniela Serey" />
+        <AboutBubble img={bastian} name="Bastian Ulloa" />
+        <AboutBubble img={catalina} name="Catalina Urzua" />
+        <AboutBubble img={tomas} name="Tomas Diaz" />
+        <AboutBubble img={david} name="David Saez" />
       </section>
   )
 }
