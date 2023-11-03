@@ -1,27 +1,26 @@
 .pagina-inicio{
     background-color: #032D59;
-    padding: 370px 235px;
+    padding: 250px 235px;
     }
-    
-    .inicio-block-1{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    }
-    
-    .inicio-block-1 p{
+
+/*.heroe{
+background: url(../../assets/Images/heroe.png) ;
+}   */ 
+
+.heroe p{
     font-family: 'Roboto Light', sans-serif;
-    font-size: 30px;
+    font-size: 25px;
     color: white;
-    }
-    
-    .inicio-block-1 h1{
+}
+
+.heroe h1{
+    /*height: 100vh;*/
     font-size: 60px;
     font-family: 'Roboto Medium', sans-serif;
     color:white;
-    }
-    
-    .inicio-block-1 button, .btn-crearcuenta{
+}
+
+.btn-crearcuenta{
     background-color: #ff8c00;
     color: black;
     font-family: 'NATS';
@@ -31,97 +30,101 @@
     padding: auto;
     border: none;
     border-radius: 50px;
-    }
-    
-    .inicio-block-2 {
+}
+
+h3{
     font-family: 'NATS', sans-serif;
     font-size: 28px;
     color: white;
+    line-height: 25px;
+}
+
+.propuesta-valor{
+    padding-top: 25em;
+}
+
+.propuesta-valor h3{
+    line-height: 2em;
     text-align: center;
     justify-content: center;
-    line-height: 25px;
-    }
-    
-    /*.inicio-block-2 h3{
-    falta agregar espacio arriba de ayuda al planeta jugando y aprendiendo
-    }*/
-    
-    
-    .inicio-block-2-2{
+}
+
+.propuesta-valor-cuadros{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    }
-    
-    .inicio-block-2-2 div{
-    width: 12.5em;
-    padding: 1em;
+}
+
+.propuesta-valor-cuadros div{
+    width: 22em;
+    padding: 2em;
     background-color: rgba(0, 78, 151, 0.9);
     margin: 0.5em auto;
-    border-radius: 15%;
+    border-radius: 18%;
     text-align: left;
     justify-content: center;
     align-items: center;
-    }
-    
-    .inicio-block-2-2 div img{
+}
+
+.propuesta-valor-cuadros p{
+    display: flex;
+    font-family: 'NATS', sans-serif;
+    font-size: 24px;
+    color: white;
+    text-align: left;
+    justify-content: center;
+    line-height: 24px;
+    margin-top: 0.5em;
+}
+
+.propuesta-valor-cuadros div img{
     margin: 0.2em auto;
-    }
-    
-    @media screen and (max-width: 992px){
-        .pagina-inicio{
-        padding: 370px 1em;
-        }
-        .inicio-block-1{
-        margin: 1em;
-        justify-content: center;
-        align-items: center;
-        }
-        .inicio-block-1 h1{
-        font-size: 20px;
-        }
-        .inicio-block-2-2 div{
-        font-size: 20px;
-        justify-content: center;
-        align-items: center;
-        }
-    }
-    
-    .inicio-block-3 h3{
-    color: white;
-    font-size: 40px;
-    }
-    
-    .inicio-block-3 h4{
-    color: white;
-    font-size: 30px;
-    }
-    
-    .mockup{
-    width: 500px;
-    align-items: right;
-    }
-    
-    .num-usuarios{
+}
+
+.seccion-numeros{
+    padding-top: 12em;
+}
+
+.num-usuarios{
     color: #ff8c00;
     font-size: 100px;
-    text-align: right;
-    }
-    
-    .num-donacion{
-    color: #ff8c00;
+    text-align: right;    
+}
+
+.num-donacion-text-1{
+    padding-top: 10em;
+    color: white;
+    font-size: 22px;
+    text-align: left;
+}
+
+.num-donacion-text-2{
+    color: white;
+    font-size: 22px;
+    text-align: left;
+}
+
+.num-donacion{
     font-size: 100px;
-    text-align: left;
-    }
-    
-    .num-usuarios-text{
+    color: #ff8c00;
+    text-align: left;    
+}
+
+.num-usuarios-text{
     color: white;
-    font-size: 30px;
+    font-size: 22px;
     text-align: right;
+}
+
+.mockup{
+    width: 550px;
     }
-    
-    .num-donacion-text{
-    color: white;
-    font-size: 30px;
-    text-align: left;
-    }
+
+.mockup-container{
+    padding-top: 12em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
