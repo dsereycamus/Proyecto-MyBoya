@@ -1,4 +1,4 @@
-button {
+.quiz-button {
   border: 0;
   background-color: #054d97;
   color: white;
@@ -8,12 +8,12 @@ button {
   cursor: pointer;
 }
 
-button:disabled {
+.quiz-button:disabled {
   background-color: #80bacc;
   cursor: not-allowed;
 }
 
-button:hover:enabled {
+.quiz-button:hover:enabled {
   background-color: #80bacc;
 }
 

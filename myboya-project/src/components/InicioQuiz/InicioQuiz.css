@@ -1,147 +1,148 @@
-*{
-    margin: 0;
-    padding:0;
-
+* {
+  margin: 0;
+  padding: 0;
 }
 body {
-    background-color: #032D59;
+  background-color: #032d59;
 }
 
-.container{
-    display: flex;
-    background-color: #032D59;
-    padding: none;
-    flex-direction: column;
-
+.container {
+  display: flex;
+  background-color: #032d59;
+  padding: none;
+  flex-direction: column;
 }
 .InicioQuiz {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.btn{
-    text-align: center;
-    padding: auto;
-    border-radius: 60px;
-    justify-content: center;
-    align-items: center;  
-
+.btn {
+  text-align: center;
+  padding: auto;
+  border-radius: 60px;
+  justify-content: center;
+  align-items: center;
 }
-.btnplay, .btnwho {
-    margin: 5px;
-    border: none;
+.btnplay,
+.btnwho {
+  margin: 5px;
+  border: none;
 }
 
-.insignia img, .ranking img{
-    margin: 20px;
+.insignia img,
+.ranking img {
+  margin: 20px;
 }
 
 .btnplay {
-    background-color: #ff8c00;
-    width: 586px;
-    height: 141px;
-    text-align: center;
-    padding: auto;
-    border-radius: 40px;
-    justify-content: center;
-    align-items: center; /*Flex o Grid*/
+  background-color: #ff8c00;
+  width: 586px;
+  height: 141px;
+  text-align: center;
+  padding: auto;
+  border-radius: 40px;
+  justify-content: center;
+  align-items: center; /*Flex o Grid*/
 }
 
-.btnwho{
-    background-color: whitesmoke;
-    width: 586px;
-    height: 68px;
-    text-align: center;
-    padding: auto;
-    border-radius: 60px;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    
-
+.btnwho {
+  background-color: whitesmoke;
+  width: 586px;
+  height: 68px;
+  text-align: center;
+  padding: auto;
+  border-radius: 60px;
+  justify-content: center;
+  align-items: center;
+  color: black;
 }
-
 
 .rank {
-    display: flex;
-    background: hsl(85, 85, 85);
-    flex-direction: column;
-    justify-content: right;
-    align-items: end;
-    text-align: center;
-    gap: 1rem;
-    padding-right: 5rem;
+  display: flex;
+  background: hsl(85, 85, 85);
+  flex-direction: column;
+  justify-content: right;
+  align-items: end;
+  text-align: center;
+  gap: 1rem;
+  padding-right: 5rem;
 }
 
-
-
 .ranking {
-
 }
 
 .insignia {
-
 }
 
-.ranking img{
-    width: 75px;
-    height: 75px;
-
+.ranking img {
+  width: 75px;
+  height: 75px;
 }
-.insignia img{
-    width: 75px;
-    height: 75px;
+.insignia img {
+  width: 75px;
+  height: 75px;
 }
 
-.ranking-insignia{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgba(0, 78, 151, 0.9);
-    padding: 0.25em 0.75em;
-    border-radius: 50px;
-    border: none;
-    min-width: 17rem;
-    padding-left: 1em;
-    
+.ranking-insignia {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 78, 151, 0.9);
+  padding: 0.25em 0.75em;
+  border-radius: 50px;
+  border: none;
+  min-width: 17rem;
+  padding-left: 1em;
 }
-.datocurioso-contenedor{
-    display: flex;
-    flex-direction: column;
-    padding-right: 1rem;
-
+.datocurioso-contenedor {
+  display: flex;
+  flex-direction: column;
+  padding-right: 1rem;
 }
 
 .datocurioso {
-    background-color: rgba(0, 78, 151, 0.9);
-    width: 30rem;
-    padding: 0.750em 1.75em;
-    border-radius: 60px;
-    text-align: center;
-    align-self: flex-end;
-    position: relative;
-}
-.datocurioso::before{
-    content: "";
-    width: 380px;
-    height: 380px;
-    position: absolute;
-    background: no-repeat center/100% url(../../assets/Images/tortuga.png);
-    left: -90%;
-    top: 65%;
-    animation: tortuga 3s ease-in-out infinite;
-}
-@keyframes tortuga{
-    50%{
-        transform: rotateZ(-4deg);
-    }
+  background-color: #004a91;
+  width: 30rem;
+  padding: 0.75em 1.75em;
+  border-radius: 60px;
+  text-align: center;
+  align-self: flex-end;
+  position: relative;
 }
 
-.datocurioso-contenedor > img{
-    width: 60%;
-    max-width: 800px;
+.datocurioso::before {
+  content: "";
+  width: 380px;
+  height: 380px;
+  position: absolute;
+  background: no-repeat center/100% url(../../assets/Images/tortuga.png);
+  left: -90%;
+  top: 65%;
+  animation: tortuga 3s ease-in-out infinite;
+}
+
+.datocurioso::after {
+  content: "";
+  width: 40px;
+  height: 50px;
+  position: absolute;
+  left: -10px;
+  bottom: 7px;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 50px solid #004a91;
+}
+
+@keyframes tortuga {
+  50% {
+    transform: rotateZ(-4deg);
+  }
+}
+
+.datocurioso-contenedor > img {
+  width: 60%;
+  max-width: 800px;
 }
