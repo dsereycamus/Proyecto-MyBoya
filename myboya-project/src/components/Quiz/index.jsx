@@ -3,6 +3,7 @@ import useQuiz from "./useQuiz";
 import "./quiz.css";
 
 function Quiz() {
+
   const {
     score,
     timer,
@@ -15,6 +16,8 @@ function Quiz() {
 
   const isFinished = currentQuestion === preguntas.length;
 
+  console.log();
+
   if (isFinished)
     return (
       <section>
@@ -22,7 +25,10 @@ function Quiz() {
           <span>
             Obtuviste {score} de {preguntas.length}{" "}
           </span>
-          <button onClick={() => window.location.reload()}>
+          <button
+            className="quiz-button"
+            onClick={() => window.location.reload()}
+          >
             Volver a jugar
           </button>
         </div>
@@ -42,6 +48,7 @@ function Quiz() {
       <div className="alternativas">
         {preguntas[currentQuestion].opciones.map((respuesta, idx) => (
           <button
+            className="quiz-button"
             style={{
               opacity: showBar ? 1 : selectedAnswer === idx ? 1 : 0,
             }}
@@ -62,14 +69,18 @@ function Quiz() {
         </div>
       )}
       {timer === 0 && selectedAnswer === undefined && (
-        <button onClick={nextQuestion}>Continuar</button>
+        <button className="quiz-button" onClick={nextQuestion}>
+          Continuar
+        </button>
       )}
       {selectedAnswer !== undefined && (
         <div className="resultado">
           {preguntas[currentQuestion].opciones[selectedAnswer].isCorrect
             ? "¡Respuesta correcta!"
             : "Respuesta incorrecta"}
-          <button onClick={nextQuestion}>Continuar</button>
+          <button className="quiz-button" onClick={nextQuestion}>
+            Continuar
+          </button>
         </div>
       )}
     </section>
