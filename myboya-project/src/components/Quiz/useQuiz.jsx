@@ -16,7 +16,11 @@ const useQuiz = () => {
   };
 
   const selectAnswer = (isCorrect, e, idx) => {
-    if (isCorrect) setScore(score + 5);
+    if (isCorrect) {
+      setScore(score + 5);
+    } else {
+      setScore(score + 2); // Agrega 2 puntos si la respuesta no es precisa
+    }
 
     e.target.classList.add("answer-checking");
     setShowBar(false);
