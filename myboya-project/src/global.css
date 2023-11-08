@@ -42,6 +42,10 @@ img, svg, picture, video{
   font-weight: normal;
 }
 
+#root{
+  color: var(--clr-white, #FFFFFF);
+}
+
 .text-center{
   text-align: center;
 }
