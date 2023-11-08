@@ -16,7 +16,7 @@ const useQuiz = () => {
   };
 
   const selectAnswer = (isCorrect, e, idx) => {
-    if (isCorrect) setScore(score + 1);
+    if (isCorrect) setScore(score + 5);
 
     e.target.classList.add("answer-checking");
     setShowBar(false);
