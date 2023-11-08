@@ -3,8 +3,12 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  padding: 2rem 0;
   gap: .75rem;
 }
 .card-about__title{
   font-size: var(--font-lg, 1.725rem);
+}
+.card-about__info{
+  text-align: center;
 }
