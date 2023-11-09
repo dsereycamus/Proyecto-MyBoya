@@ -70,18 +70,18 @@ const Contacto = () => {
           <img src={cuchara} className="cuchara-image" alt="cuchara" />
           <img src={tenedor} className="tenedor-image" alt="tenedor" />
         
-          <form ref={form} onSubmit={sendEmail}>
-            <label htmlFor="name">Nombre:</label>
-            <input type="text" name="user_name" id="name" />
+          <form className="form-contacto" ref={form} onSubmit={sendEmail}>
+            <label className="form-label" htmlFor="name">Nombre:</label>
+            <input className="form-input" type="text" name="user_name" id="name" />
 
-            <label htmlFor="email">Correo electrónico:</label>
-            <input type="email" name="user_email" id="email" />
+            <label className="form-label" htmlFor="email">Correo electrónico:</label>
+            <input className="form-input"type="email" name="user_email" id="email" />
 
-            <label htmlFor="subject">Asunto:</label>
-            <input type="text" name="user_subject" id="subject" />
+            <label className="form-label" htmlFor="subject">Asunto:</label>
+            <input className="form-input"type="text" name="user_subject" id="subject" />
 
-            <label>Tu mensaje:</label>
-            <textarea name="message" id="message" cols="38" rows="5"></textarea>
+            <label className="form-label">Tu mensaje:</label>
+            <textarea className= "form-textarea" name="message" id="message" cols="38" rows="5"></textarea>
 
             <button className="btn" type="submit">
               Enviar
