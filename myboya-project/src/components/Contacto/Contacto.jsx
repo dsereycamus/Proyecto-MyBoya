@@ -49,7 +49,7 @@ const Contacto = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container-contacto">
       <div className="form-container">
         <div className="form-text">
           <img src={halo} className="halo-image" alt="Halo" />
