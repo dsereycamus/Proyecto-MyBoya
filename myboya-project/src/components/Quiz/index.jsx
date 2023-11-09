@@ -38,7 +38,7 @@ function Quiz() {
     );
 
   return (
-    <section className="container">
+    <section className="container-question">
       <Modal isOpen={showAdvertisement} onClose={resetQuestionsAnswered} />
       <div className="preguntas">
         <div className="numero-pregunta">
