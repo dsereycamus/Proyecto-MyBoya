@@ -3,6 +3,9 @@ import useQuiz from "./useQuiz";
 import "./quiz.css";
 import clock from "../../assets/Icons/clock.png";
 import Modal from "../Modal/Modal";
+import whaler from "../../assets/Images/whale-right.png";
+import whalel from "../../assets/Images/whale-left.png";
+import { Link } from "react-router-dom";
 
 function Quiz() {
   const {
@@ -26,13 +29,15 @@ function Quiz() {
           <div className="total-score">
             <span className="you-got">Conseguiste </span>{" "}
             <span className="score">{score} puntos</span>{" "}
+            <img src={whalel} className="whale-left" alt="whale-left" />
+            <img src={whaler} className="whale-right"alt="whale-right" />
           </div>
-          <button
-            className="quiz-button"
-            onClick={() => window.location.reload()}
+          <Link to="/playground"><button
+            className="quiz-button play-button"
+            // onClick={() => window.location.reload()}
           >
             Volver a jugar
-          </button>
+          </button></Link>
         </div>
       </section>
     );
@@ -56,7 +61,7 @@ function Quiz() {
           />
         </div>
       </div>
-      <div className="alternatives">
+      <div className="alternatives" style={{ lineHeight: 1, textAlign: "center" }}>
         {preguntas[currentQuestion].opciones.map((respuesta, idx) => (
           <button
             className="quiz-button"
