@@ -59,7 +59,7 @@ body {
   font-size: 30px;
 }
 
-.container {
+.container-question {
   display: flex;
   gap: 1rem;
   flex-direction: column;
