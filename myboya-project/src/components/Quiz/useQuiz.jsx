@@ -12,7 +12,7 @@ const useQuiz = () => {
 
   const nextQuestion = () => {
     setCurrentQuestion((x) => x + 1);
-    setTimer(15);
+    setTimer(30);
     setSelectedAnswer(undefined);
     setShowBar(true);
   };

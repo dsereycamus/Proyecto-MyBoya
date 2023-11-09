@@ -6,7 +6,7 @@ const GeneralLayout = () => {
   return (
     <main>
       <Navbar />
-      <div style={{ minHeight: "50vh" }}>
+      <div style={{ minHeight: "65vh" }}>
         <Outlet />
       </div>
       <Footer />
