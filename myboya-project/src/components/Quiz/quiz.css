@@ -174,14 +174,14 @@ body {
   position: absolute;
   top: 10%;
   left: 0%;
-  width: 600px;
+  width: 580px;
 }
 
 .whale-right{
   position: absolute;
   right: 0%;
   top:-3%;
-  width: 600px;
+  width: 580px;
 }
 /* HD */
 @media (min-width: 600px) {
@@ -191,6 +191,7 @@ body {
   .background-timer-bar {
     width: 50%;
   }
+  
 }
 /* Phone */
 @media (max-width: 500px) {
@@ -212,5 +213,33 @@ body {
 
   .correct-answertext , .wrong-answertext, .timeisover { 
     font-size: 18px;
+  }
+
+  .game-over {
+    line-height: 0.7;
+  }
+
+  .you-got, .score {
+    font-size: 30px;
+  }
+  
+  .play-button{
+    margin-top: 280px;
+    width: 150px;
+    height: 30px;
+    font-size: 15px;
+  }  
+
+  .whale-left{
+    position: absolute;
+    top: 32%;
+    width: 200px;
+  }
+  
+  .whale-right{
+    position: absolute;
+    right: 0%;
+    top:35%;
+    width: 200px;
   }
 }
