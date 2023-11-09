@@ -3,16 +3,23 @@ import { useState, useEffect } from "react";
 
 const useQuiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [selectedAnswer, setSelectedAnwser] = useState(undefined);
+  const [selectedAnswer, setSelectedAnswer] = useState(undefined);
   const [showBar, setShowBar] = useState(true);
   const [score, setScore] = useState(0);
   const [timer, setTimer] = useState(15);
+  const [questionsAnswered, setQuestionsAnswered] = useState(0);
+  const [showAdvertisement, setShowAdvertisement] = useState(false);
 
   const nextQuestion = () => {
     setCurrentQuestion((x) => x + 1);
     setTimer(15);
-    setSelectedAnwser(undefined);
+    setSelectedAnswer(undefined);
     setShowBar(true);
+  };
+
+  const resetQuestionsAnswered = () => {
+    setQuestionsAnswered(0);
+    setShowAdvertisement(false); // Oculta el modal de publicidad
   };
 
   const selectAnswer = (isCorrect, e, idx) => {
@@ -26,9 +33,17 @@ const useQuiz = () => {
     setShowBar(false);
     setTimeout(() => {
       e.target.classList.add(isCorrect ? "answer-correct" : "answer-incorrect");
-      setSelectedAnwser(idx);
+      setSelectedAnswer(idx);
+      setQuestionsAnswered(questionsAnswered + 1);
     }, 2000);
   };
+
+  useEffect(() => {
+    if (questionsAnswered === 4) {
+      setShowAdvertisement(true);
+      setQuestionsAnswered(0); // Reinicia el contador de preguntas respondidas
+    }
+  }, [questionsAnswered]);
 
   useEffect(() => {
     const intervalo = setInterval(() => {
@@ -46,6 +61,9 @@ const useQuiz = () => {
     selectedAnswer,
     nextQuestion,
     selectAnswer,
+    questionsAnswered,
+    resetQuestionsAnswered,
+    showAdvertisement,
   };
 };
 

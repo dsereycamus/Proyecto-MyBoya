@@ -2,6 +2,7 @@ import preguntas from "./preguntas";
 import useQuiz from "./useQuiz";
 import "./quiz.css";
 import clock from "../../assets/Icons/clock.png";
+import Modal from "../Modal/Modal";
 
 function Quiz() {
   const {
@@ -12,11 +13,11 @@ function Quiz() {
     nextQuestion,
     showBar,
     currentQuestion,
+    resetQuestionsAnswered,
+    showAdvertisement,
   } = useQuiz();
 
   const isFinished = currentQuestion === preguntas.length;
-
-  console.log();
 
   if (isFinished)
     return (
@@ -38,6 +39,7 @@ function Quiz() {
 
   return (
     <section className="container">
+      <Modal isOpen={showAdvertisement} onClose={resetQuestionsAnswered} />
       <div className="preguntas">
         <div className="numero-pregunta">
           <span className="question-number">
@@ -47,6 +49,7 @@ function Quiz() {
         </div>
         <div className="title-question">
           <div
+            style={{ lineHeight: 1, textAlign: "center" }}
             dangerouslySetInnerHTML={{
               __html: preguntas[currentQuestion].titulo,
             }}
