@@ -9,12 +9,10 @@ import { ParticlesBackground } from "./components/config/ParticlesBackground";
 import Quiz from "./components/Quiz";
 import GeneralLayout from "./layouts/GeneralLayout";
 
-
 function App() {
   return (
     <BrowserRouter>
-    <ParticlesBackground />
-      <Navbar />
+      <ParticlesBackground />
       <Routes>
         <Route path="/" element={<GeneralLayout />}>
           <Route index element={<Inicio />} />
