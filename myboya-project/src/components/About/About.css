@@ -7,8 +7,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
+
 .about__title{
   margin: 0;
   font-size: var(--font-xl, 1.725rem);
@@ -101,5 +101,7 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  position: relative;
 }
+
 
