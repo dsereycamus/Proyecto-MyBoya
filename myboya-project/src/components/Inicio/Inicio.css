@@ -1,11 +1,24 @@
+.img-heroe{
+    display: block;
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    z-index: 0;
+    }
+
 .pagina-inicio{
     background-color: #032D59;
     padding: 250px 235px;
     }
 
 /*.heroe{
-background: url(../../assets/Images/heroe.png) ;
-}   */ 
+    display: flex;
+    width: 100%;
+    background: url(../../assets/Images/heroe.png) ;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+}  */
+
 
 .heroe p{
     font-family: 'Roboto Light', sans-serif;
@@ -27,9 +40,10 @@ background: url(../../assets/Images/heroe.png) ;
     width: 220px;
     font-size: 24px;
     text-align: center;
-    padding: auto;
     border: none;
     border-radius: 50px;
+    position: relative;
+    z-index: 1;
 }
 
 h3{
@@ -40,7 +54,7 @@ h3{
 }
 
 .propuesta-valor{
-    padding-top: 25em;
+    padding-top: 32em;
 }
 
 .propuesta-valor h3{
@@ -51,17 +65,18 @@ h3{
 
 .propuesta-valor-cuadros{
     display: flex;
+    gap: 2rem;
 }
 
 .propuesta-valor-cuadros div{
-    width: 22em;
-    padding: 2em;
+    width: 20em;
+    padding: 1em;
     background-color: rgba(0, 78, 151, 0.9);
-    margin: 0.5em auto;
     border-radius: 18%;
     text-align: left;
     justify-content: center;
     align-items: center;
+
 }
 
 .propuesta-valor-cuadros p{
@@ -83,10 +98,25 @@ h3{
     padding-top: 12em;
 }
 
+.ballena-seccionnumeros{
+    position: absolute;
+    left: -10%;
+    top: 1450px;
+}
+
+.halo-seccionnumeros{
+    position: absolute;
+    top: 1450px;
+    z-index: 0;
+    right: 18%;
+}
+
 .num-usuarios{
     color: #ff8c00;
     font-size: 100px;
-    text-align: right;    
+    text-align: right;  
+    position: relative;
+    z-index: 2;  
 }
 
 .num-donacion-text-1{
@@ -94,24 +124,38 @@ h3{
     color: white;
     font-size: 22px;
     text-align: left;
+    position: relative;
+    z-index: 2;
 }
 
 .num-donacion-text-2{
     color: white;
     font-size: 22px;
     text-align: left;
+    position: relative;
+    z-index: 2;
 }
 
 .num-donacion{
     font-size: 100px;
     color: #ff8c00;
-    text-align: left;    
+    text-align: left;   
+    position: relative;
+    z-index: 2; 
 }
 
 .num-usuarios-text{
     color: white;
     font-size: 22px;
     text-align: right;
+    position: relative;
+    z-index: 2;
+}
+
+.peces-seccionnumeros{
+    position: absolute;
+    left: 59.7%;
+    top: 1750px;
 }
 
 .mockup{
@@ -128,3 +172,12 @@ h3{
     align-content: center;
 }
 
+.mockup-texto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tortuga{
+    width: 200px;
+}
