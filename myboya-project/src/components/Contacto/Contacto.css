@@ -12,9 +12,6 @@ body {
   font-family: "NATS";
   font-size: 50px;
 }
-p {
-  font-family: "Roboto regular", sans-serif;
-}
 
 .container {
   display: flex;
@@ -50,10 +47,12 @@ p {
 
 .white-text {
   color: #ffffff;
+  font-family: "Roboto regular", sans-serif;
 }
 
 .orange-text {
   color: var(--clr-orange, #ff8c00);
+  font-family: "Roboto regular", sans-serif;
 }
 
 .bag-image {
@@ -72,19 +71,18 @@ p {
   padding-right: 600px;
 }
 
-form {
+.form-contacto {
   display: flex;
   flex-direction: column;
 }
 
-label {
+.form-label{
   font-size: 17px;
   color: #ffffff;
   margin-bottom: 0.625rem;
 }
 
-input,
-textarea {
+.form-input,.form-textarea {
   padding: 17px 14px;
   background-color: var(--clr-blue, #032d59);
   border: 1px solid white;
