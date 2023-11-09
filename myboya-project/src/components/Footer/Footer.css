@@ -238,6 +238,11 @@
     left: 0;
   }
 }
+@media (min-width: 1024px) { 
+  .footer__copy::before{
+    top: -175%;
+  }
+}
 @keyframes alga1 {
   50%{
     transform: rotatez(2deg);
