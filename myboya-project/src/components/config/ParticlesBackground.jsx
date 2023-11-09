@@ -7,7 +7,7 @@ export const ParticlesBackground = () => {
     loadFull(engine)
   },[])
   return(
-    <div className>
+    <div>
       <Particles
       options={particlesConfig}
       init={particlesInit}
