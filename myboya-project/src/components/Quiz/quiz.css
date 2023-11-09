@@ -28,6 +28,7 @@ body {
   border-radius: 30px;
   padding: 12px 20px;
   transition: background-color 0.125s ease-in;
+  transition: opacity 0.125s ease-in;
   cursor: pointer;
 }
 
@@ -133,28 +134,27 @@ body {
   font-size: 25px;
 }
 
-.game-over{
+.game-over {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.total-score{
+.total-score {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.you-got{
-  color: #80BACC;
+.you-got {
+  color: #80bacc;
   font-size: 60px;
 }
 
 .score {
   font-size: 60px;
   color: #ff8c00;
-  
 }
 
 /* HD */
