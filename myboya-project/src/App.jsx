@@ -5,12 +5,16 @@ import Contacto from "./components/Contacto/Contacto";
 import Sesion from "./components/Sesion/Sesion";
 import About from "./components/About/About";
 import InicioQuiz from "./components/InicioQuiz/InicioQuiz";
+import { ParticlesBackground } from "./components/config/ParticlesBackground";
 import Quiz from "./components/Quiz";
 import GeneralLayout from "./layouts/GeneralLayout";
+
 
 function App() {
   return (
     <BrowserRouter>
+    <ParticlesBackground />
+      <Navbar />
       <Routes>
         <Route path="/" element={<GeneralLayout />}>
           <Route index element={<Inicio />} />
