@@ -117,6 +117,7 @@ h3{
     text-align: right;  
     position: relative;
     z-index: 2;  
+    line-height: 30px;
 }
 
 .num-donacion-text-1{
@@ -142,6 +143,7 @@ h3{
     text-align: left;   
     position: relative;
     z-index: 2; 
+    line-height: 30px;
 }
 
 .num-usuarios-text{
