@@ -8,7 +8,8 @@ import heroe from "../../assets/Images/heroe.png";
 import ballena from "../../assets/Images/ballenita.png";
 import halo from "../../assets/Images/halo.png";
 import peces from "../../assets/Images/pececitos.png";
-import tortuga from "../../assets/Images/tortuga.png"
+import tortuga from "../../assets/Images/tortuga.png";
+import {Link} from "react-router-dom";
 
 function Inicio() {
   return (
@@ -18,7 +19,7 @@ function Inicio() {
       <section className="heroe">
         <p>Bienvenido a</p>
         <h1>La plataforma que se la juega por la vida submarina</h1>
-        <button className="btn-crearcuenta">Empezar</button>
+        <Link to="/playground"><button className="btn-crearcuenta">Empezar</button></Link>
       </section>
       <div className="propuesta-valor">
         <h3>Ayuda al planeta jugando y aprendiendo</h3>
