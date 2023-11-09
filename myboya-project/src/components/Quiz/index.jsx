@@ -77,7 +77,7 @@ function Quiz() {
           <div className="background-timer-bar">
             <div
               className="timer-bar"
-              style={{ width: `${(1 - timer / 15) * 100}%` }}
+              style={{ width: `${(1 - timer / 30) * 100}%` }}
             />
           </div>
         </div>
