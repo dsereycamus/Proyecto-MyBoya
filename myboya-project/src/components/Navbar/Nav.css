@@ -1,5 +1,5 @@
 
-.header {
+.header-navbar {
     background-color: #032D59;
     display: flex;
     justify-content: flex-end;
@@ -8,48 +8,48 @@
     padding: 0.3rem 10%;
 }
 
-.header .logoNav {
+.header-navbar .logoNav {
     cursor: pointer;
     margin-right: auto;
 }
 
-.header .logoNav img {
+.header-navbar .logoNav img {
     height: 5.6rem;
     width: auto;
     transition: all 0.3s;
 }
 
-.header .logoNav img:hover {
+.header-navbar .logoNav img:hover {
     transform: scale(1.2);
 }
 
-.header .listaNav {
+.header-navbar .listaNav {
     list-style: none;
 }
 
-.header .listaNav li {
+.header-navbar .listaNav li {
     display: inline-block;
     padding: 0 1.25rem;
 }
 
-.header .listaNav li:hover {
+.header-navbar .listaNav li:hover {
     transform: scale(1.1);
 }
 
-.header .listaNav a {
+.header-navbar .listaNav a {
     font-size: 700;
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
-.header .listaNav li a:hover {
+.header-navbar .listaNav li a:hover {
     color: #FF8C00;
 }
 
-.header .btn3 button {
+.header-navbar .btn-registro-nav button {
     margin-left: 1.25rem;
-    font-weight: 700;
+    font-weight: 600;
     color: white;
     padding: 0.5rem 1.5rem;
     background-color: #FF8C00;
@@ -59,13 +59,13 @@
     transition: all 0.3s ease 0s;
 } 
 
-.header .btn3 button:hover { 
+.header-navbar .btn-registro-nav button:hover { 
     transform: scale(1.1);
 }
 
-.header .btn2 button {
+.header-navbar .btn-sesion-nav button {
     margin-left: 1.25rem;
-    font-weight: 700;
+    font-weight: 600;
     color: black;
     padding: 0.5rem 1.5rem;
     background-color: white;
@@ -75,6 +75,6 @@
     transition: all 0.3s ease 0s;
 }
 
-.header .btn2 button:hover { 
+.header-navbar .btn-sesion-nav button:hover { 
     transform: scale(1.1);
 }

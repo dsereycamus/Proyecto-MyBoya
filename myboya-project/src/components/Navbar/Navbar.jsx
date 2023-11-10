@@ -4,7 +4,7 @@ import { NavLink, Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <header className="header">
+    <header className="header-navbar">
       <div className="logoNav">
         <Link to="/">
           <img src={logo} alt="Logo MyBoya" />
@@ -29,10 +29,10 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
-      <Link to="/sesion" className="btn2">
+      <Link to="/sesion" className="btn-sesion-nav">
         <button>Inicio sesión</button>
       </Link>
-      <Link to="/registro" className="btn3">
+      <Link to="/registro" className="btn-registro-nav">
         <button>¡Regístrate!</button>
       </Link>
     </header>
