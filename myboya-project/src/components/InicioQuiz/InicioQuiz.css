@@ -47,6 +47,7 @@ body {
 .btnplay {
   display: flex;
   background-color: #ff8c00;
+  color: white;
   font-size: 100px;
   width: 36.625rem;
   height: 8.8125rem;
