@@ -8,6 +8,7 @@ import InicioQuiz from "./components/InicioQuiz/InicioQuiz";
 import { ParticlesBackground } from "./components/config/ParticlesBackground";
 import Quiz from "./components/Quiz";
 import GeneralLayout from "./layouts/GeneralLayout";
+import { BoyaGame } from "./components/NewGame/BoyaGame";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="quiz" element={<Quiz />} />
           <Route path="playground" element={<InicioQuiz />} />
+          <Route path="newgame" element={<BoyaGame />} />
         </Route>
       </Routes>
     </BrowserRouter>
