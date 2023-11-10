@@ -7,6 +7,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
 }
 
 .about__title{
@@ -18,7 +19,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2.5rem 0;
+  padding: 2.5rem 1em;
 }
 .vision__title, .mision__title, .team__title{
   font-size: var(--font-lg, 1.725rem);
@@ -52,51 +53,7 @@
     transform: translateY(-2px) rotateZ(-2deg);
   }
 }
-.about-magic > span:nth-child(1){
-  width: 2.5rem;
-  height: 2.5rem;
-  background: no-repeat center/100% url(../../assets/Images/tenedor.png);
-  position: absolute;
-  top: 0;
-  grid-row: 1 / 2;
-  grid-column: 1 / 2;
-}
-.about-magic > span:nth-child(2){
-  width: 2.5rem;
-  height: 2.5rem;
-  background: no-repeat center/100% url(../../assets/Images/cuchara.png);
-  position: absolute;
-  right: 0;
-  grid-row: 2 / 3;
-  grid-column: 4 / 5;
-}
-.about-magic > span:nth-child(3){
-  width: 5rem;
-  height: 5rem;
-  background: no-repeat center/100% url(../../assets/Images/bolsa.png);
-  position: absolute;
-  top: 0;
-  grid-row: 3 / 4;
-  grid-column: 1 / 2;
-}
-.about-magic > span:nth-child(4){
-  width: 5rem;
-  height: 5rem;
-  background: no-repeat center/100% url(../../assets/Images/salvavidas.png);
-  position: absolute;
-  bottom: 0;
-  grid-row: 4 / 5;
-  grid-column: 4 / 5;
-}
-.about-magic > span:nth-child(5){
-  width: 4rem;
-  height: 4rem;
-  background: no-repeat center/100% url(../../assets/Images/tortuga.png);
-  position: absolute;
-  top: 30%;
-  grid-row: 5 / 6;
-  grid-column: 1 / 2;
-}
+
 .team{
   display: flex;
   flex-direction: column;
@@ -104,4 +61,56 @@
   position: relative;
 }
 
+.mision, .vision{
+  background-color: var(--clr-deep-blue);
+  border-radius: 25px;
+  position: relative;
+  z-index: -1;
+}
+.mision::before, .mision::after, .vision::before, .vision::after{
+  content: '';
+  position: absolute;
+  width: 1.725rem;
+  height: 1.725rem;
+  z-index: 1;
+  top: 15%;
+  animation: basurita 3s ease-in-out infinite;
+}
+.mision::before, .vision::before{
+  left: 6%;
+}
+.mision::after, .vision::after{
+  right: 6%;
+}
+.mision::before{
+  background: no-repeat center/100% url('../../assets/Images/tenedor.png');
+}
+.mision::after{
+  background: no-repeat center/100% url('../../assets/Images/pez.png');
 
+}
+.vision::before{
+  background: no-repeat center/100% url('../../assets/Images/pez2rev.png');
+}
+.vision::after{
+  background: no-repeat center/100% url('../../assets/Images/cuchara.png');
+
+}
+@media (min-width: 425px) { 
+  .mision::before, .mision::after, .vision::before, .vision::after{
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+@media (min-width: 425px) { 
+  .mision::before, .mision::after, .vision::before, .vision::after{
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+  .mision::before, .vision::before{
+    left: 10%;
+  }
+  .mision::after, .vision::after{
+    right: 10%;
+  }
+}

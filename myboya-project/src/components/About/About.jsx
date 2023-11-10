@@ -8,15 +8,8 @@ const About = () => {
   return (
     <main className="about-container">
       <h1 className="about__title">Quienes somos</h1>
-      <div className="about-magic">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <Vision />
       <Mision />
+      <Vision />
       <Team />
       
     </main>
