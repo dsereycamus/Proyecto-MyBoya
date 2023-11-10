@@ -1,9 +1,16 @@
+.team-card__container{
+  display: flex;
+  width: clamp(300px,100%,1400px);
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 .card-about{ 
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   padding: 2rem 0;
+  margin: 0rem 1rem;
   gap: .75rem;
 }
 .card-about__title{

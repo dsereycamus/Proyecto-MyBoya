@@ -57,8 +57,13 @@
 .team{
   display: flex;
   flex-direction: column;
+  width: 100%;
   gap: 2rem;
   position: relative;
+}
+.team__title{
+  margin: 0;
+  font-size: var(--font-xl, 1.725rem);
 }
 
 .mision, .vision{
