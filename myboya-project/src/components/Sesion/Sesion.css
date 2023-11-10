@@ -1,4 +1,4 @@
-.containers {
+.containers-sesion {
     display: flex;
     flex-direction: column;
     margin-top: 100px;
@@ -7,7 +7,7 @@
     background-size: cover;
 }
 
-.formulario {
+.formulario-sesion {
     width: 28.75rem;
     height: 35.938rem;
     background-color: rgba(217, 217, 217, 0.15);
@@ -16,28 +16,29 @@
     
 }
 
-.formulario h1 {
+.formulario-sesion h1 {
     text-align: center;
-    padding: 0 0 2rem 0;
+    padding: 0 0 1.5rem 0;
     margin-top: 3rem;
     color: white;
     font-size: var(--font-lg);
 }
 
-.formulario p {
-    margin: 0.625rem 0.625rem 2rem 0.625rem;
-    font-size: 17px;
+.formulario-sesion p {
+    margin: 0.625rem 0.625rem 1.5rem 0.625rem;
+    font-size: 23px;
     
 }
 
-.formulario label {
+.formulario-sesion label {
     color: white;
     font-size: 17px;
     margin: 0.625rem 0.625rem 0.625rem 0.625rem;
 }
 
-.formulario .btn3 {
-    font-weight: 700;
+.btn-sesion {
+    font-weight: 600;
+    font-size: var(--font-md);
     color: white;
     padding: 0.5em 1.5em;
     background-color: var(--clr-orange, #ff8c00);
@@ -46,19 +47,20 @@
     cursor: pointer;
     transition: all 0.3s ease 0s;
     margin-top: 2rem;
+    width: 14rem;
 }
 
-.formulario form {
-    padding: 0 2.5rem;
+.formulario-sesion form {
+    padding: 0 3rem;
     box-sizing: border-boxs;
 }
 
-form .usuario {
+form .usuario-sesion {
     display: flex;
     flex-direction: column;
 }
 
-.usuario input {
+.usuario-sesion input {
     padding: 10px;
     background-color: var(--clr-blue, #032d59);
     border: 1px solid white;
@@ -67,7 +69,7 @@ form .usuario {
     border-radius: 25px;
 }
 
-.btn-container {
+.btn-container-sesion {
     display: flex;
     justify-content: center;
 }
