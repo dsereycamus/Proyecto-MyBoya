@@ -99,6 +99,7 @@ body {
 }
 
 .rank {
+  color: white;
   display: flex;
   background: hsl(85, 85, 85);
   flex-direction: column;
@@ -119,6 +120,7 @@ body {
 }
 
 .ranking-insignia {
+  color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
