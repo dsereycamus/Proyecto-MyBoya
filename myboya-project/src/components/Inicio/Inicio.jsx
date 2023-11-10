@@ -10,11 +10,13 @@ import halo from "../../assets/Images/halo.png";
 import peces from "../../assets/Images/pececitos.png";
 import tortuga from "../../assets/Images/tortuga.png";
 import {Link} from "react-router-dom";
+import heroemobile from "../../assets/Images/heroemobile.png"
 
 function Inicio() {
   return (
     <div className="fondos">
             <img src={heroe} className="img-heroe"></img>
+            <img src={heroemobile} className="img-heroe-mobile"></img>
     <div className="pagina-inicio">
       <section className="heroe">
         <p>Bienvenido a</p>
@@ -22,7 +24,7 @@ function Inicio() {
         <Link to="/playground"><button className="btn-crearcuenta">Empezar</button></Link>
       </section>
       <div className="propuesta-valor">
-        <h3>Ayuda al planeta jugando y aprendiendo</h3>
+        <p className="propuesta-valor-h3">Ayuda al planeta jugando y aprendiendo</p>
         <div className="propuesta-valor-cuadros">
           <div>
             <img src={quiz} />
