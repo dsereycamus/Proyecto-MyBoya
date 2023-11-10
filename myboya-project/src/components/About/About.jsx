@@ -11,7 +11,6 @@ const About = () => {
       <Mision />
       <Vision />
       <Team />
-      
     </main>
   );
 };

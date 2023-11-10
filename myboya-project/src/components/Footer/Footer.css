@@ -15,6 +15,19 @@
     gap: 0rem;
   }
 }
+@media (min-width: 1024px) { 
+  .footer-grid{
+    grid-template-rows: repeat(2, 8.5rem);
+    gap: 0rem;
+    overflow-y: hidden;
+  }
+}
+@media (min-width: 1440px) { 
+  .footer-grid{
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
 .footer-grid::after{
   width: 100%;
   height: calc(15vw);
@@ -30,9 +43,18 @@
   .footer__logo{
     display: flex;
     width: clamp(5rem,8vw,10rem);
+    align-self: end;
+    justify-self: center;
+    z-index: 1;
+    margin-bottom: 1rem;
+  }
+}
+@media (min-width: 1440px) { 
+  .footer__logo{
     align-self: center;
     justify-self: center;
     z-index: 1;
+    margin-bottom: 0rem;
   }
 }
 .footer-container{
@@ -95,7 +117,7 @@
 }
 @media (min-width: 1024px) { 
   .footer__info{
-    gap: .725rem;
+    gap: .225rem;
   }
 }
 
