@@ -69,7 +69,7 @@ function Inicio() {
       </div>
       <section className="mockup-container">
         <div className="mockup-texto">
-          <h3>Únete a MyBoya</h3>
+          <p className="mockup-unete">Únete a MyBoya</p>
           <button className="btn-crearcuenta">Crear cuenta</button>
         </div>
         <div>

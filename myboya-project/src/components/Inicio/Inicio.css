@@ -184,6 +184,11 @@
     align-items: center;
 }
 
+.mockup-unete{
+    font-family: 'NATS', sans-serif;
+    font-size: 28px;
+}
+
 .tortuga{
     width: 200px;
 }
@@ -276,6 +281,9 @@
     text-align: center;
     align-items: center;
     align-content: center;
+    }
+    .mockup-unete{
+    font-size: 17px;
     }
     .mockup{
     max-width: 320px;
@@ -388,6 +396,10 @@
     align-items: center;
     align-content: center;
     }
+    .mockup-unete{
+    font-size: 15px;
+    line-height: 20px;
+    }
     .mockup{
     max-width: 200px;
     }
@@ -395,4 +407,3 @@
     max-width: 100px;
     }
 }
-
