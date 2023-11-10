@@ -29,6 +29,8 @@ body {
 }
 
 .halo-image {
+  user-select: none;
+  pointer-events: none;
   position: absolute;
   top: 3%;
   left: 10%;
