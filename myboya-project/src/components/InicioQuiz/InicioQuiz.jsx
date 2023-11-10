@@ -26,7 +26,7 @@ const InicioQuiz = () => {
         <div className="InicioQuiz">
           <div>
             <button onClick={startQuiz} className="btnplay">
-              Play
+            Jugar
             </button>
           </div>
           <div>
