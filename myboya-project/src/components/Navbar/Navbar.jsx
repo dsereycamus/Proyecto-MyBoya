@@ -32,9 +32,9 @@ const Navbar = () => {
       <Link to="/sesion" className="btn2">
         <button>Inicio sesión</button>
       </Link>
-      <a href="" className="btn3">
+      <Link to="/registro" className="btn3">
         <button>¡Regístrate!</button>
-      </a>
+      </Link>
     </header>
   );
 };
