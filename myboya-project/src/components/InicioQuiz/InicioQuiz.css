@@ -6,11 +6,18 @@ body {
   background-color: #032d59;
 }
 
+
+
 .container {
   display: flex;
   background-color: #032d59;
   padding: none;
   flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1;
 }
 .InicioQuiz {
   display: flex;
@@ -22,35 +29,38 @@ body {
 .btn {
   text-align: center;
   padding: auto;
-  border-radius: 60px;
+  border-radius: 3.75rem;
   justify-content: center;
   align-items: center;
 }
 .btnplay,
 .btnwho {
-  margin: 5px;
+  margin: 0.3125rem;
   border: none;
 }
 
 .insignia img,
 .ranking img {
-  margin: 20px;
+  margin: 1.25rem;
 }
 
 .btnplay {
+  display: flex;
   background-color: #ff8c00;
-  width: 586px;
-  height: 141px;
+  color: white;
+  font-size: 100px;
+  width: 36.625rem;
+  height: 8.8125rem;
   text-align: center;
   padding: auto;
-  border-radius: 40px;
+  border-radius: 2.5rem;
   justify-content: center;
   align-items: center; /*Flex o Grid*/
-  transition: transform 0.3s;
   cursor: pointer;
   position: relative;
   overflow: hidden;
   z-index: 1;
+  transition: transform 0.3s ease;
 }
 
 .btnplay:after{
@@ -66,26 +76,31 @@ body {
 }
 
 .btnplay:active{
-  transform: translateY(4px);
+  transform: translateY(0.25rem);
+  transform: scale(1.1);
 }
 
 .btnwho {
-  background-color: whitesmoke;
-  width: 586px;
-  height: 68px;
+  display: flex;
+  color: white;
+  background-color: rgba(0, 78, 151, 0.9);
+  font-size: 30px;
+  width: 36.625rem;
+  height: 4.25rem;
   text-align: center;
   padding: auto;
-  border-radius: 60px;
+  border-radius: 3.75rem;
   justify-content: center;
   align-items: center;
-  color: black;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
 }
 .btnwho:active{
-  transform: translateY(4px);
+  transform: translateY(0.25rem);
+  transform: scale(1.1);
 }
 
 .rank {
+  color: white;
   display: flex;
   background: hsl(85, 85, 85);
   flex-direction: column;
@@ -97,21 +112,22 @@ body {
 }
 
 .ranking img {
-  width: 75px;
-  height: 75px;
+  width: 4.6875rem;
+  height: 4.6875rem;
 }
 .insignia img {
-  width: 75px;
-  height: 75px;
+  width: 4.6875rem;
+  height: 4.6875rem;
 }
 
 .ranking-insignia {
+  color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: rgba(0, 78, 151, 0.9);
   padding: 0.25em 0.75em;
-  border-radius: 50px;
+  border-radius: 3.125rem;
   border: none;
   min-width: 17rem;
   padding-left: 1em;
@@ -124,9 +140,10 @@ body {
 
 .datocurioso {
   background-color: #004a91;
+  line-height: 1;
   width: 30rem;
   padding: 0.75em 1.75em;
-  border-radius: 60px;
+  border-radius: 3.75rem;
   text-align: center;
   align-self: flex-end;
   position: relative;
@@ -134,8 +151,8 @@ body {
 
 .datocurioso::before {
   content: "";
-  width: 380px;
-  height: 380px;
+  width: 23.75rem;
+  height: 23.75rem;
   position: absolute;
   background: no-repeat center/100% url(../../assets/Images/tortuga.png);
   left: -90%;
@@ -145,11 +162,11 @@ body {
 
 .datocurioso::after {
   content: "";
-  width: 40px;
-  height: 50px;
+  width: 2.5rem;
+  height: 3.125rem;
   position: absolute;
-  left: -10px;
-  bottom: 7px;
+  left: -0.625rem;
+  bottom: 0.4375rem;
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
   border-bottom: 50px solid #004a91;
@@ -163,5 +180,5 @@ body {
 
 .datocurioso-contenedor > img {
   width: 60%;
-  max-width: 800px;
+  max-width: 50rem;
 }

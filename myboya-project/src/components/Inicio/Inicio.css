@@ -1,36 +1,34 @@
 .img-heroe{
     display: block;
     position: absolute;
-    top: 10%;
     width: 100%;
+    top: 10%;
     z-index: 0;
     }
 
+.img-heroe-mobile{
+    display: none;
+}
+
 .pagina-inicio{
     background-color: #032D59;
-    padding: 250px 235px;
+    padding: 150px 260px;
     }
-
-/*.heroe{
-    display: flex;
-    width: 100%;
-    background: url(../../assets/Images/heroe.png) ;
-    background-repeat: no-repeat;
-    background-position-y: bottom;
-}  */
-
 
 .heroe p{
     font-family: 'Roboto Light', sans-serif;
     font-size: 25px;
     color: white;
+    position: relative;
+    z-index: 2;
 }
 
 .heroe h1{
-    /*height: 100vh;*/
     font-size: 60px;
     font-family: 'Roboto Medium', sans-serif;
     color:white;
+    position: relative;
+    z-index: 2;
 }
 
 .btn-crearcuenta{
@@ -44,23 +42,29 @@
     border-radius: 50px;
     position: relative;
     z-index: 1;
+    cursor: pointer;
 }
 
-h3{
+.propuesta-valor-h3{
     font-family: 'NATS', sans-serif;
     font-size: 28px;
     color: white;
     line-height: 25px;
+    z-index: 1;
+    text-align: center;
+    margin: 0.5em;
 }
 
 .propuesta-valor{
-    padding-top: 32em;
+    padding-top: 38em;
+    z-index: 1;
 }
 
 .propuesta-valor h3{
     line-height: 2em;
     text-align: center;
     justify-content: center;
+    z-index: 1;
 }
 
 .propuesta-valor-cuadros{
@@ -70,13 +74,12 @@ h3{
 
 .propuesta-valor-cuadros div{
     width: 20em;
-    padding: 1em;
+    padding: 1.5em;
     background-color: rgba(0, 78, 151, 0.9);
     border-radius: 18%;
     text-align: left;
     justify-content: center;
     align-items: center;
-
 }
 
 .propuesta-valor-cuadros p{
@@ -86,27 +89,28 @@ h3{
     color: white;
     text-align: left;
     justify-content: center;
-    line-height: 24px;
+    line-height: 20px;
     margin-top: 0.5em;
 }
 
 .propuesta-valor-cuadros div img{
+    max-width: 60px;
     margin: 0.2em auto;
 }
 
 .seccion-numeros{
-    padding-top: 12em;
+    padding-top: 20em;
 }
 
 .ballena-seccionnumeros{
     position: absolute;
     left: -10%;
-    top: 1450px;
+    top: 1500px;
 }
 
 .halo-seccionnumeros{
     position: absolute;
-    top: 1450px;
+    top: 1500px;
     z-index: 0;
     right: 18%;
 }
@@ -156,13 +160,9 @@ h3{
 
 .peces-seccionnumeros{
     position: absolute;
-    left: 59.7%;
+    left: 59.5%;
     top: 1750px;
 }
-
-.mockup{
-    width: 550px;
-    }
 
 .mockup-container{
     padding-top: 12em;
@@ -174,12 +174,236 @@ h3{
     align-content: center;
 }
 
+.mockup{
+    width: 550px;
+    }
+
 .mockup-texto{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.mockup-unete{
+    font-family: 'NATS', sans-serif;
+    font-size: 28px;
+}
+
 .tortuga{
     width: 200px;
+}
+
+@media screen and (max-width: 768px){
+    .img-heroe{
+    top: 10%;
+    }
+    .pagina-inicio{
+    padding: 100px 50px;
+    }
+    .heroe p{
+    font-size: 18px;
+    text-align: left;
+    }
+    .heroe h1{
+    font-size: 30px;
+    }  
+    .btn-crearcuenta{
+    max-width: 120px;
+    font-size: 18px;
+    text-align: center;
+    }
+    .propuesta-valor-h3{
+    font-size: 25px;
+    line-height: 25px;
+    }
+    .propuesta-valor{
+    padding-top: 18em;
+    }
+    .propuesta-valor-cuadros{
+    gap: 0.5rem;
+    }
+    .propuesta-valor-cuadros div{
+    max-width: 20em;
+    }
+    .propuesta-valor-cuadros p{
+    font-size: 17px;
+    text-align: justify;
+    justify-content: center;
+    line-height: 15px;
+    margin-top: 0.5em;
+    }
+    .propuesta-valor-cuadros div img{
+    max-width: 50px;
+    }
+    .ballena-seccionnumeros{
+    max-width: 500px;
+    left: -10%;
+    top: 940px;
+    }
+    .halo-seccionnumeros{
+    top: 950px;
+    left: 2%;
+    }
+    .seccion-numeros{
+    padding-top: 15em;
+    }
+    .num-usuarios{
+    font-size: 70px;
+    text-align: right;  
+    line-height: 22px;
+    }
+    .num-usuarios-text{
+    font-size: 22px;
+    text-align: right;
+    }    
+    .num-donacion{
+    font-size: 70px;
+    text-align: left;   
+    line-height: 26px;
+    }
+    .num-donacion-text-1{
+    font-size: 20px;
+    text-align: left;
+    padding-top: 5%;
+    }
+    .num-donacion-text-2{
+    font-size: 20px;
+    text-align: left;
+    }
+    .peces-seccionnumeros{
+    left: 59.7%;
+    top: 1180px;
+    max-width: 300px;
+    }
+    .mockup-container{
+    padding-top: 3em;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    }
+    .mockup-unete{
+    font-size: 17px;
+    }
+    .mockup{
+    max-width: 320px;
+    }
+    .tortuga{
+    max-width: 150px;
+    }
+}
+
+@media screen and (max-width: 390px){
+    .img-heroe{
+    display: none;
+    }
+    .img-heroe-mobile{
+    display: block;
+    position: absolute;
+    }
+    .pagina-inicio{
+    padding: 280px 40px;
+    }
+    .heroe p{
+    font-size: 16px;
+    text-align: left;
+    }
+    .heroe h1{
+    font-size: 28px;
+    line-height: 34px;
+    }  
+    .btn-crearcuenta{
+    max-width: 100px;
+    font-size: 16px;
+    text-align: center;
+    }
+    .propuesta-valor-h3{
+    font-size: 24px;
+    line-height: 20px;
+    }
+    .propuesta-valor{
+    padding-top: 24em;
+    }
+    .propuesta-valor-cuadros{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    }
+    .propuesta-valor-cuadros div{
+    display: flex;
+    flex-direction: column;
+    max-width: 20em;
+    border-radius: 17%;
+    }
+    .propuesta-valor-cuadros p{
+    font-size: 17px;
+    text-align: left;
+    justify-content: center;
+    line-height: 15px;
+    }
+    .propuesta-valor-cuadros div img{
+    max-width: 45px;
+    }
+    .ballena-seccionnumeros{
+    max-width: 350px;
+    left: -15%;
+    top: 1650px;
+    }
+    .halo-seccionnumeros{
+    top: 1600px;
+    left: -30%;
+    max-width: 700px;
+    }
+    .seccion-numeros{
+    padding-top: 18em;
+    }
+    .num-usuarios{
+    font-size: 70px;
+    text-align: right;  
+    line-height: 40px;
+    }
+    .num-usuarios-text{
+    font-size: 22px;
+    text-align: right;
+    line-height: 23px;
+    }    
+    .peces-seccionnumeros{
+    left: 50%;
+    top: 1800px;
+    max-width: 300px;
+    }
+    .num-donacion{
+    font-size: 70px;
+    text-align: left;
+    line-height: 40px;
+    }
+    .num-donacion-text-1{
+    font-size: 20px;
+    text-align: left;
+    padding-top: 35%;
+    line-height: 18px;
+    }
+    .num-donacion-text-2{
+    font-size: 20px;
+    text-align: left;
+    line-height: 18px;
+    }
+    .mockup-container{
+    padding-top: 3em;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    }
+    .mockup-unete{
+    font-size: 15px;
+    line-height: 20px;
+    }
+    .mockup{
+    max-width: 200px;
+    }
+    .tortuga{
+    max-width: 100px;
+    }
 }

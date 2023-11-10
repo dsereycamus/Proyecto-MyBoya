@@ -6,13 +6,13 @@ const useQuiz = () => {
   const [selectedAnswer, setSelectedAnswer] = useState(undefined);
   const [showBar, setShowBar] = useState(true);
   const [score, setScore] = useState(0);
-  const [timer, setTimer] = useState(15);
+  const [timer, setTimer] = useState(30);
   const [questionsAnswered, setQuestionsAnswered] = useState(0);
   const [showAdvertisement, setShowAdvertisement] = useState(false);
 
   const nextQuestion = () => {
     setCurrentQuestion((x) => x + 1);
-    setTimer(15);
+    setTimer(30);
     setSelectedAnswer(undefined);
     setShowBar(true);
   };
