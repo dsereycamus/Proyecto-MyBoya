@@ -10,6 +10,7 @@ import Quiz from "./components/Quiz";
 import GeneralLayout from "./layouts/GeneralLayout";
 import { BoyaGame } from "./components/NewGame/BoyaGame";
 import Registro from "./components/Registro/Registro";
+import New from "./components/New/New";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="playground" element={<InicioQuiz />} />
           <Route path="newgame" element={<BoyaGame />} />
           <Route path="registro" element={<Registro />} />
+          <Route path="new" element={<New />} />
         </Route>
       </Routes>
     </BrowserRouter>

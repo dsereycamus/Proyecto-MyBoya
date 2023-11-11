@@ -5,11 +5,11 @@ import Footer from "../components/Footer/Footer";
 const GeneralLayout = () => {
   return (
     <main>
-      <Navbar />
+      {window.location.pathname !== '/new' && <Navbar />}
       <div style={{ minHeight: "65vh" }}>
         <Outlet />
       </div>
-      <Footer />
+      {window.location.pathname !== '/new' && <Footer />}
     </main>
   );
 };
