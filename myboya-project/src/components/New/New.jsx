@@ -6,6 +6,7 @@ import { Ground } from "./Ground";
 import { Fpv } from "./FPV";
 import { Player } from "./Player";
 import { Cubes } from "./Cubes";
+import { TextureSelector } from "./TextureSelector";
 function New() {
   return (
     <div className="boyacraft">
@@ -20,6 +21,7 @@ function New() {
         </Physics>
       </Canvas>
       <div className="pointer">+</div>
+      <TextureSelector />
     </div>
   );
 }

@@ -17,3 +17,22 @@
   font-size: 40px;
   opacity: .5;
 }
+.texture-selector{
+  position: absolute;
+  padding: 1rem;
+  border: 5px solid var(--clr-deep-blue);
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+}
+.texture-selector img {
+  width: 80px;
+  z-index: 100;
+  image-rendering: pixelated;
+  border: 5px solid var(--clr-deep-blue);
+}
+.texture-selector img.selected{
+  border-color: var(--clr-orange);
+}
