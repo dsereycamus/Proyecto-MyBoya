@@ -36,7 +36,7 @@
   }
 }
 .footer-container{
-  background: var(--clr-blue);
+  background: transparent;
   color: var(--clr-white, #FFFFFF);
 }
 .footer__social__container{
