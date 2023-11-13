@@ -16,8 +16,14 @@ export const useStore = create(set => ({
       }]
     }))
   },
-  removeCube: () => {},
-  setTexture: () => {},
+  removeCube: (id) => {
+    set(state => ({
+      cubes: state.cubes.filter(cube => cube.id !== id)
+    }))
+  },
+  setTexture: (texture) => {
+    set(() => ({texture}))
+  },
   saveWorld: () => {},
   resetWorld: () => {},
 }))
