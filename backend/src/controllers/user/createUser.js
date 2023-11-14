@@ -1,11 +1,11 @@
 const bcrypt = require('bcrypt')
-const User = require('../models/user.model')
+const User = require('../../models/user.model')
 
-export const createUser = async (req, res) => {
+const createUser = async (req, res) => {
 
-  const {name, lastName, email, password} = await req.body
+  const {name, email, password} = await req.body
 
-  if(!name || !lastName || !email || !password){
+  if(!name || !email || !password){
     return res.status(404).json({
       msg:"Todos los campos son requeridos",
       status:404
@@ -33,3 +33,4 @@ export const createUser = async (req, res) => {
   }
 
 }
+module.exports = {createUser}
