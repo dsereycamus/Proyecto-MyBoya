@@ -12,7 +12,7 @@ const userSchema = new Schema({
     require: true,
     default: 'active'
   },
-  points: { default: 0 }
+  points: { type: Number, default: 0 }
 })
 // Creación del modelo
 const User = mongoose.model('User', userSchema)
