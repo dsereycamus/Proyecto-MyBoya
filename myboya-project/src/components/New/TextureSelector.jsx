@@ -3,7 +3,7 @@ import * as images from '../../assets/new/images'
 import { useStore } from './newhooks/useStore'
 import { useKeyboard } from './newhooks/useKeyboard'
 
-export const TextureSelector = () => {
+export function TextureSelector() {
   const [texture, setTexture] = useStore(state => [state.texture, state.setTexture])
 
   const {
@@ -22,16 +22,16 @@ export const TextureSelector = () => {
       wood,
       log
     }
-    const selectedTexture = Object
+    const [selectedTexture] = Object
       .entries(options)
-      .find(([texture, isEnabled]) => isEnabled )
+      .find(([texture, isEnabled]) => isEnabled ) ?? texture
       if(selectedTexture){
         const [textureName] = selectedTexture
         setTexture(textureName)
       }
 
       setTexture(selectedTexture)
-  }, [dirt,grass,glass,wood,log])
+  }, [dirt, grass, glass, wood, log])
 
 
   return(
@@ -51,3 +51,5 @@ export const TextureSelector = () => {
     </div>
   )
 }
+
+export default TextureSelector
