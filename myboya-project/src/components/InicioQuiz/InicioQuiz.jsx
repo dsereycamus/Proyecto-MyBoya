@@ -3,7 +3,6 @@ import foto_ranking from "../../assets/Icons/ranking.png";
 import foto_insignia from "../../assets/Icons/insignia.png";
 import foto_olas from "../../assets/Icons/ola+algas.png";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 
 const InicioQuiz = () => {
   const navigate = useNavigate();
