@@ -12,10 +12,10 @@
 } 
 @keyframes boing {
   0%,100%{
-    transform: translateY(-2px);
+    transform: translateY(-3px);
   }
   50%{
-    transform: translateY(2px);
+    transform: translateY(3px);
   }
 }
 .bubble::before{

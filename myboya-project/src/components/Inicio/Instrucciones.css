@@ -1,0 +1,45 @@
+.fondoPaginaInstrucciones{
+background-color: #032d59;
+padding: 70px 260px;
+}
+
+.textoInstrucciones h1{
+font-family: 'NATS', sans-serif;
+text-align: left;
+font-size: 44px;
+font-weight: 750;
+color: #ff8c00;
+padding-bottom: 30px;
+}
+
+.textoInstrucciones{
+font-family: 'NATS', sans-serif;
+text-align: left;
+font-size: 26px;
+line-height: 110%;
+color: white;
+}
+
+.containerInstrucciones{
+display: flex;
+align-items: center;
+}  
+
+.videoInstrucciones{
+max-width: 350px;
+}
+
+.botonJugar{
+display: flex;
+background-color: #ff8c00;
+color: white;
+font-size: 28px;
+width: 200px;
+text-align: center;
+padding: 0.5em;
+border-radius: 2rem;
+border: none;
+justify-content: center;
+cursor: pointer;
+margin-top: 30px;
+}
