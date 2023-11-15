@@ -1,6 +1,6 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 
-const { Schema } = mongoose
+const { Schema } = mongoose;
 // Creación de esquema
 const userSchema = new Schema({
   name: String,
@@ -8,13 +8,13 @@ const userSchema = new Schema({
   password: String,
   status: {
     type: String,
-    enum: ['active', 'inactive'],
+    enum: ["active", "inactive", "banned"],
     require: true,
-    default: 'active'
+    default: "active",
   },
-  points: { type: Number, default: 0 }
-})
+  points: { type: Number, default: 0 },
+});
 // Creación del modelo
-const User = mongoose.model('User', userSchema)
+const User = mongoose.model("User", userSchema);
 
-module.exports = User
+module.exports = User;
