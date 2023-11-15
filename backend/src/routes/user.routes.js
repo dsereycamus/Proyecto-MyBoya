@@ -1,6 +1,11 @@
-const { createUser } = require("../controllers/user/createUser");
-const router = require("express").Router();
+const { createUser } = require('../controllers/user/createUser')
+const { updateUserById } = require('../controllers/user/updateUser')
+const router = require('express').Router()
 
-router.post("/user/createUser", createUser);
+// Crear usuario
+router.post('/createUser', createUser)
 
-module.exports = router;
+// Actualizar datos del usuario
+router.put('/update/:iduser', updateUserById)
+
+module.exports = router
