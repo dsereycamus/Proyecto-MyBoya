@@ -3,11 +3,13 @@ import foto_ranking from "../../assets/Icons/ranking.png";
 import foto_insignia from "../../assets/Icons/insignia.png";
 import foto_olas from "../../assets/Icons/ola+algas.png";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const InicioQuiz = () => {
   const navigate = useNavigate();
 
   const startQuiz = () => navigate("/quiz");
+  const comoJugar = () => navigate("/instrucciones");
 
   return (
     <>
@@ -30,7 +32,7 @@ const InicioQuiz = () => {
             </button>
           </div>
           <div>
-            <button className="btnwho">¿Cómo Jugar?</button>
+            <button onClick={comoJugar} className="btnwho">¿Cómo Jugar?</button>
           </div>
         </div>
       </div>
