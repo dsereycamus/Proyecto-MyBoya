@@ -10,7 +10,7 @@ import halo from "../../assets/Images/halo.png";
 import peces from "../../assets/Images/pececitos.png";
 import tortuga from "../../assets/Images/tortuga.png";
 import {Link} from "react-router-dom";
-import heroemobile from "../../assets/Images/heroemobile.png"
+import heroemobile from "../../assets/Images/heroemobile.png";
 
 function Inicio() {
   return (

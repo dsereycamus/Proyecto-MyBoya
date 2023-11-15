@@ -9,6 +9,7 @@ import { ParticlesBackground } from "./components/config/ParticlesBackground";
 import Quiz from "./components/Quiz";
 import GeneralLayout from "./layouts/GeneralLayout";
 import Registro from "./components/Registro/Registro";
+import Instrucciones from "./components/Inicio/Instrucciones";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="quiz" element={<Quiz />} />
           <Route path="playground" element={<InicioQuiz />} />
           <Route path="registro" element={<Registro />} />
+          <Route path="instrucciones" element={<Instrucciones />} />
         </Route>
       </Routes>
     </BrowserRouter>
