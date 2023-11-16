@@ -25,6 +25,13 @@ function App() {
           <Route path="playground" element={<InicioQuiz />} />
           <Route path="registro" element={<Registro />} />
           <Route path="new" element={<New />} />
+<<<<<<< Updated upstream
+=======
+          <Route path="instrucciones" element={<Instrucciones />} />
+          <Route path="/quiz" element={<GameLayout />}>
+            <Route path="" element={<Quiz />} />
+          </Route>
+>>>>>>> Stashed changes
         </Route>
       </Routes>
     </BrowserRouter>
