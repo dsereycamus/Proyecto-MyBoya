@@ -8,6 +8,7 @@ const InicioQuiz = () => {
   const navigate = useNavigate();
 
   const startQuiz = () => navigate("/quiz");
+  const comoJugar = () => navigate("/instrucciones");
 
   return (
     <>
@@ -30,7 +31,7 @@ const InicioQuiz = () => {
             </button>
           </div>
           <div>
-            <button className="btnwho">¿Cómo Jugar?</button>
+            <button onClick={comoJugar} className="btnwho">¿Cómo Jugar?</button>
           </div>
         </div>
       </div>
