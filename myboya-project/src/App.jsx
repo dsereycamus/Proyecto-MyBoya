@@ -27,8 +27,13 @@ function App() {
           <Route path="registro" element={<Registro />} />
           <Route path="new" element={<New />} />
           <Route path="instrucciones" element={<Instrucciones />} />
+          <Route path="/quiz" element={<GameLayout />}>
+            <Route path="" element={<Quiz />} />
+          </Route>
+          <Route path="instrucciones" element={<Instrucciones />} />
         <Route path="/quiz" element={<GameLayout />}>
           <Route path="" element={<Quiz />} />
+        </Route>
         </Route>
       </Routes>
     </BrowserRouter>
