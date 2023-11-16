@@ -1,6 +1,6 @@
 import "./InicioQuiz.css";
 import foto_ranking from "../../assets/Icons/ranking.png";
-import foto_insignia from "../../assets/Icons/insignia.png";
+import foto_pezpregunta from "../../assets/Images/pezpregunta.png";
 import foto_olas from "../../assets/Icons/ola+algas.png";
 import { useNavigate } from "react-router-dom";
 
@@ -17,9 +17,9 @@ const InicioQuiz = () => {
           <button className="ranking ranking-insignia">
             Ranking <img src={foto_ranking} alt="icono del ranking" />
           </button>
-          <button className="insignia ranking-insignia">
-            Consigue tu insignia
-            <img src={foto_insignia} alt="icono de la insignia" />
+          <button className="insignia ranking-insigniaa">
+          Consigue tu insignia
+            <img src={foto_pezpregunta} alt="icono de la insignia" />
           </button>
         </div>
       </div>
@@ -45,7 +45,7 @@ const InicioQuiz = () => {
             afectando la flora y fauna de nuestros océanos.
           </p>
         </div>
-        <img src={foto_olas} alt="fondo olas" />
+        <img src={foto_olas} className="foto-ola" alt="fondo olas" />
       </aside>
     </>
   );
