@@ -54,7 +54,7 @@ const navigate = useNavigate();
  
     useEffect(() => {
     if (createUser){
-        navigate('/')
+        navigate('/playground')
         }
 
     },[navigate, createUser])
