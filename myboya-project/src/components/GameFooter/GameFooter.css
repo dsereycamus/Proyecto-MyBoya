@@ -1,0 +1,54 @@
+.game-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.seawhale-game {
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+}
+
+.right-seawhale-game {
+  bottom: -15%;
+  position: absolute;
+  left: 50%;
+  user-select: none;
+  pointer-events: none;
+}
+.tortugame {
+  width: 15rem;
+  height: 15rem;
+  position: absolute;
+  top: 75%;
+  right: 78%;
+}
+
+.footer-quiz {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .right-seawhale-game {
+    display: none;
+  }
+
+  .tortugame {
+    width: 7rem;
+    height: 7rem;
+    position: absolute;
+    right: 40%;
+    top: 900px;
+  }
+
+  .footer-quiz {
+    display: block;
+    position: absolute;
+    top: 950px;
+  }
+
+  .game-footer {
+    height: 110px;
+  }
+}

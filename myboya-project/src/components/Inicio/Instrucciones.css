@@ -1,0 +1,99 @@
+.fondoPaginaInstrucciones{
+background-color: #032d59;
+padding: 50px 260px;
+}
+
+.textoInstrucciones h1{
+font-family: 'NATS', sans-serif;
+text-align: left;
+font-size: 44px;
+font-weight: 750;
+color: #ff8c00;
+padding-bottom: 30px;
+}
+
+.textoInstrucciones{
+display: flex;
+flex-direction: column;
+font-family: 'NATS', sans-serif;
+text-align: left;
+font-size: 26px;
+line-height: 110%;
+color: white;
+}
+
+.containerInstrucciones{
+display: flex;
+align-items: center;
+}  
+
+.videoInstrucciones{
+max-width: 350px;
+}
+
+.botonJugar{
+display: flex;
+background-color: #ff8c00;
+color: white;
+font-size: 28px;
+width: 200px;
+text-align: center;
+padding: 0.5em;
+border-radius: 2rem;
+border: none;
+justify-content: center;
+cursor: pointer;
+margin-top: 30px;
+}
+
+@media screen and (max-width: 768px){
+    .fondoPaginaInstrucciones{
+        padding: 120px 80px;
+        }
+    .textoInstrucciones h1{
+        font-size: 30px;
+        padding-bottom: 15px;
+        }
+    .textoInstrucciones{
+        font-size: 18px;
+        line-height: 110%;
+        }
+    .videoInstrucciones{
+        max-width: 230px;
+        }
+    .botonJugar{
+        font-size: 18px;
+        width: 120px;
+        padding: 0.5em;
+        margin-top: 15px;
+        }
+}
+
+@media screen and (max-width: 390px){
+    .fondoPaginaInstrucciones{
+        padding: 80px 40px;
+        }
+    .containerInstrucciones{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        }  
+    .textoInstrucciones h1{
+        text-align: center;
+        font-size: 30px;
+        font-weight: 750;
+        padding-bottom: 20px;
+        }
+    .textoInstrucciones{
+        font-size: 18px;
+        line-height: 125%;
+        }
+    .botonJugar{
+        width: 120px;
+        padding: 0.5em;
+        margin-top: 15px;
+        margin-bottom: 50px;
+        align-self: center;
+        }
+}
