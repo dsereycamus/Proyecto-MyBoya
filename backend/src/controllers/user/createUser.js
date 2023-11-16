@@ -10,6 +10,13 @@ const createUser = async (req, res) => {
       status: 404,
     });
   }
+  const emailBd = await User.findOne({email: `${email}`}).exec()
+  if(emailBd !== null){
+    return res.status(409).json({
+      msg: "Ya existe una cuenta con este correo.",
+      status: 409,
+    });
+  }
   // Falta realizar validación si es que ya está registrado.
   try {
     const salt = bcrypt.genSaltSync();
@@ -21,7 +28,7 @@ const createUser = async (req, res) => {
     });
     res.status(201).json({
       msg: "Usuario creado.",
-      status: 500,
+      status: 201,
     });
   } catch (err) {
     console.log(err);
