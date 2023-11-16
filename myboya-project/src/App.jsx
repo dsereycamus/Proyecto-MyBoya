@@ -9,6 +9,7 @@ import { ParticlesBackground } from "./components/config/ParticlesBackground";
 import Quiz from "./components/Quiz";
 import GeneralLayout from "./layouts/GeneralLayout";
 import Registro from "./components/Registro/Registro";
+import New from "./components/New/New";
 import Instrucciones from "./components/Inicio/Instrucciones";
 import GameLayout from "./layouts/GameLayout";
 
@@ -24,8 +25,8 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="playground" element={<InicioQuiz />} />
           <Route path="registro" element={<Registro />} />
+          <Route path="new" element={<New />} />
           <Route path="instrucciones" element={<Instrucciones />} />
-        </Route>
         <Route path="/quiz" element={<GameLayout />}>
           <Route path="" element={<Quiz />} />
         </Route>
