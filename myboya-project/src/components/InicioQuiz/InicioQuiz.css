@@ -37,6 +37,7 @@ body {
 .btnwho {
   margin: 0.3125rem;
   border: none;
+  cursor: pointer;
 }
 
 .insignia img,
