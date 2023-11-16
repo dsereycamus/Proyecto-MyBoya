@@ -31,9 +31,9 @@ function App() {
             <Route path="" element={<Quiz />} />
           </Route>
           <Route path="instrucciones" element={<Instrucciones />} />
-        <Route path="/quiz" element={<GameLayout />}>
-          <Route path="" element={<Quiz />} />
-        </Route>
+          <Route path="/quiz" element={<GameLayout />}>
+            <Route path="" element={<Quiz />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>
