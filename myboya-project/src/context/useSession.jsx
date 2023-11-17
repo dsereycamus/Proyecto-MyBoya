@@ -15,6 +15,7 @@ export const SessionProvider = ({ children }) => {
 
     if (response.status === 200) {
       window.localStorage.setItem("isLoggedIn", true);
+      setIsLoggedIn(true);
       setUserData(response);
     }
     return response.status === 200;

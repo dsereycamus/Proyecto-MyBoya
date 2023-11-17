@@ -4,13 +4,25 @@ const User = require("../../models/user.model");
 const createUser = async (req, res) => {
   const { name, email, password } = await req.body;
 
+  // Validación que estén todos los campos.
   if (!name || !email || !password) {
     return res.status(404).json({
       msg: "Todos los campos son requeridos",
       status: 404,
     });
   }
-  // Falta realizar validación si es que ya está registrado.
+  // Fin validación
+
+  // Validación si es que ya está registrado.
+  const emailBd = await User.findOne({email: `${email}`}).exec()
+  if(emailBd !== null){
+    return res.status(409).json({
+      msg: "Ya existe una cuenta con este correo.",
+      status: 409,
+    });
+  }
+  // Fin Validación
+
   try {
     const salt = bcrypt.genSaltSync();
 
@@ -21,7 +33,7 @@ const createUser = async (req, res) => {
     });
     res.status(201).json({
       msg: "Usuario creado.",
-      status: 500,
+      status: 201,
     });
   } catch (err) {
     console.log(err);

@@ -9,13 +9,12 @@ import { ParticlesBackground } from "./components/config/ParticlesBackground";
 import Quiz from "./components/Quiz";
 import GeneralLayout from "./layouts/GeneralLayout";
 import Registro from "./components/Registro/Registro";
+import New from "./components/New/New";
 import Instrucciones from "./components/Inicio/Instrucciones";
 import GameLayout from "./layouts/GameLayout";
-import { useSession } from "./context/useSession";
+import PartnersSection from "./components/Partners/Partners";
 
 function App() {
-  const { isLoggedIn } = useSession();
-
   return (
     <BrowserRouter>
       <ParticlesBackground />
@@ -27,18 +26,15 @@ function App() {
           <Route path="sesion" element={<Sesion />} />
           <Route path="about" element={<About />} />
           <Route path="registro" element={<Registro />} />
+          <Route path="new" element={<New />} />
+          <Route path="playground" element={<InicioQuiz />} />
           <Route path="instrucciones" element={<Instrucciones />} />
+          <Route path="partners" element={<PartnersSection />} />
         </Route>
-        {isLoggedIn && (
-          <>
-            <Route path="/playground" element={<GameLayout />}>
-              <Route path="" element={<InicioQuiz />} />
-            </Route>
-            <Route path="/quiz" element={<GameLayout />}>
-              <Route path="" element={<Quiz />} />
-            </Route>
-          </>
-        )}
+
+        <Route path="/quiz" element={<GameLayout />}>
+          <Route path="" element={<Quiz />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

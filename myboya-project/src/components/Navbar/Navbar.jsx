@@ -1,10 +1,16 @@
 import logo from "../../assets/Icons/logobg.png";
 import { useSession } from "../../context/useSession";
 import "./Nav.css";
-import { NavLink, Link } from "react-router-dom";
+import { useNavigate, NavLink, Link } from "react-router-dom";
 
 const Navbar = () => {
-  const { isLoggedIn, logout } = useSession();
+  const navigate = useNavigate();
+  const { isLoggedIn, logout: logoutContext } = useSession();
+
+  const logout = () => {
+    logoutContext();
+    navigate("/");
+  };
 
   return (
     <header className="header-navbar">
@@ -35,7 +41,9 @@ const Navbar = () => {
         </ul>
       </nav>
       {isLoggedIn ? (
-        <button onClick={logout}>Cerrar sesión</button>
+        <li className="btn-registro-nav">
+          <button onClick={logout}>Cerrar sesión</button>
+        </li>
       ) : (
         <>
           <Link to="/sesion" className="btn-sesion-nav">

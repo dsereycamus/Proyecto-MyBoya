@@ -56,7 +56,7 @@ body {
   padding: auto;
   border-radius: 2.5rem;
   justify-content: center;
-  align-items: center; /*Flex o Grid*/
+  align-items: center; 
   cursor: pointer;
   position: relative;
   overflow: hidden;
@@ -133,6 +133,19 @@ body {
   min-width: 17rem;
   padding-left: 1em;
 }
+.ranking-insigniaa {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 78, 151, 0.9);
+  padding: 0.25em 0.75em;
+  border-radius: 3.125rem;
+  border: none;
+  min-width: 17rem;
+  padding-left: 1em;
+}
+
 .datocurioso-contenedor {
   display: flex;
   flex-direction: column;
@@ -183,3 +196,35 @@ body {
   width: 60%;
   max-width: 50rem;
 }
+@media screen and (max-width:1024px) {
+  .InicioQuiz{
+    margin-top: 80px;
+  }
+  .container {
+    margin-left: 20px;
+  }
+  .rank{
+    margin-top: 50px;
+  }
+  .btnwho {
+    width: 15.625rem;
+    height: 3.8125rem;
+    font-size: 30px;
+  }
+  .btnplay {
+    width: 18.625rem;
+    height: 4.8125rem;
+    font-size: 30px;
+  }
+  .fondo-olas{
+    display: none;
+  }
+
+  .foto-ola{
+    display: none;
+  }
+  .datocurioso{
+    display: none;
+  }
+}
+
