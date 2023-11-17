@@ -12,6 +12,7 @@ import Registro from "./components/Registro/Registro";
 import New from "./components/New/New";
 import Instrucciones from "./components/Inicio/Instrucciones";
 import GameLayout from "./layouts/GameLayout";
+import PartnersSection from "./components/Partners/Partners";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="registro" element={<Registro />} />
           <Route path="new" element={<New />} />
           <Route path="instrucciones" element={<Instrucciones />} />
+          <Route path="partners" element={<PartnersSection />} />
         </Route>
         <Route path="/quiz" element={<GameLayout />}>
           <Route path="" element={<Quiz />} />
