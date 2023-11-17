@@ -12,7 +12,9 @@ const PartnersSection = () => {
   return (
     <section className="partners-section">
       <div className="row-partners">
-        <h2 className="section-titlepartners">NUESTROS PARTNERS</h2>
+        <h2 className="section-titlepartners">
+          Nuestros Partners!batidora yaga & mackie
+        </h2>
       </div>
       <div className="row-partners">
         <div className="column-partners">
