@@ -19,17 +19,19 @@ function App() {
     <BrowserRouter>
       <ParticlesBackground />
       <Routes>
+        <Route path="*" element={<div>No hay página</div>} />
         <Route path="/" element={<GeneralLayout />}>
           <Route index element={<Inicio />} />
           <Route path="contacto" element={<Contacto />} />
           <Route path="sesion" element={<Sesion />} />
           <Route path="about" element={<About />} />
-          <Route path="playground" element={<InicioQuiz />} />
           <Route path="registro" element={<Registro />} />
           <Route path="new" element={<New />} />
+          <Route path="playground" element={<InicioQuiz />} />
           <Route path="instrucciones" element={<Instrucciones />} />
           <Route path="partners" element={<PartnersSection />} />
         </Route>
+
         <Route path="/quiz" element={<GameLayout />}>
           <Route path="" element={<Quiz />} />
         </Route>

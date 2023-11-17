@@ -1,8 +1,17 @@
 import logo from "../../assets/Icons/logobg.png";
+import { useSession } from "../../context/useSession";
 import "./Nav.css";
-import { NavLink, Link } from "react-router-dom";
+import { useNavigate, NavLink, Link } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const { isLoggedIn, logout: logoutContext } = useSession();
+
+  const logout = () => {
+    logoutContext();
+    navigate("/");
+  };
+
   return (
     <header className="header-navbar">
       <div className="logoNav">
@@ -21,20 +30,30 @@ const Navbar = () => {
           <li>
             <NavLink to="/partners">Partners</NavLink>
           </li>
-          <li>
-            <NavLink to="/playground">Noticias</NavLink>
-          </li>
+          {isLoggedIn && (
+            <li>
+              <NavLink to="/playground">Noticias</NavLink>
+            </li>
+          )}
           <li>
             <NavLink to="/contacto">Contacto</NavLink>
           </li>
         </ul>
       </nav>
-      <Link to="/sesion" className="btn-sesion-nav">
-        <button>Inicio sesión</button>
-      </Link>
-      <Link to="/registro" className="btn-registro-nav">
-        <button>¡Regístrate!</button>
-      </Link>
+      {isLoggedIn ? (
+        <div className="btn-registro-nav">
+          <button onClick={logout}>Cerrar sesión</button>
+        </div>
+      ) : (
+        <>
+          <Link to="/sesion" className="btn-sesion-nav">
+            <button>Inicio sesión</button>
+          </Link>
+          <Link to="/registro" className="btn-registro-nav">
+            <button>¡Regístrate!</button>
+          </Link>
+        </>
+      )}
     </header>
   );
 };

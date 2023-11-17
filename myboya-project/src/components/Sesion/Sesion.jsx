@@ -1,8 +1,12 @@
 import { useState } from "react";
-import { login } from "../../services/login";
 import "./Sesion.css";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import { useSession } from "../../context/useSession";
 
 const Sesion = () => {
+  const { login } = useSession();
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -17,9 +21,18 @@ const Sesion = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const response = await login(email, password);
+    try {
+      const response = await login(email, password);
 
-    console.log(response);
+      if (response) {
+        toast.success("Has iniciado sesión con éxito");
+        navigate("/playground");
+      } else {
+        toast.error("Inicio de sesión fallido. Verifica tus credenciales");
+      }
+    } catch (error) {
+      toast.error("Error al procesar inicio de sesión. Inténtalo más tarde.");
+    }
   };
 
   return (
@@ -29,7 +42,7 @@ const Sesion = () => {
         <form onSubmit={handleSubmit}>
           <div className="usuario-sesion">
             <p>Inicia sesión con tu cuenta</p>
-            <label htmlFor="texto">Email</label>
+            <label htmlFor="email">Email</label>
             <input
               type="text"
               id="email"
@@ -37,10 +50,11 @@ const Sesion = () => {
               onChange={handleEmailChange}
               required
             />
-            <label htmlFor="texto">Contraseña</label>
+            <label htmlFor="password">Contraseña</label>
             <input
               type="password"
               id="password"
+              style={{ color: "white" }}
               value={password}
               onChange={handlePasswordChange}
               required
