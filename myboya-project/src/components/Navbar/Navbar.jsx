@@ -19,7 +19,7 @@ const Navbar = () => {
             <NavLink to="/about">Nosotros</NavLink>
           </li>
           <li>
-            <>Partners</>
+            <NavLink to="/partners">Partners</NavLink>
           </li>
           <li>
             <NavLink to="/playground">Noticias</NavLink>
