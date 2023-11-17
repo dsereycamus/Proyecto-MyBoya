@@ -41,9 +41,9 @@ const Navbar = () => {
         </ul>
       </nav>
       {isLoggedIn ? (
-        <li className="btn-registro-nav">
+        <div className="btn-registro-nav">
           <button onClick={logout}>Cerrar sesión</button>
-        </li>
+        </div>
       ) : (
         <>
           <Link to="/sesion" className="btn-sesion-nav">
