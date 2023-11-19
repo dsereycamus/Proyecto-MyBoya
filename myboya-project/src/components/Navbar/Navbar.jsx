@@ -35,7 +35,7 @@ const Navbar = () => {
           </li>
           {isLoggedIn && (
             <li>
-              <NavLink to="/playground">Noticias</NavLink>
+              <NavLink to="/playground">Quiz</NavLink>
             </li>
           )}
           <li>
