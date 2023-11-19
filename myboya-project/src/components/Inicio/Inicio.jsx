@@ -21,7 +21,7 @@ function Inicio() {
       <section className="heroe">
         <p>Bienvenido a</p>
         <h1>La plataforma que se la juega por la vida submarina</h1>
-        <Link to="/playground"><button className="btn-crearcuenta">Empezar</button></Link>
+        <Link to="/registro"><button className="btn-crearcuenta">Empezar</button></Link>
       </section>
       <div className="propuesta-valor">
         <p className="propuesta-valor-h3">Ayuda al planeta jugando y aprendiendo</p>
@@ -70,7 +70,7 @@ function Inicio() {
       <section className="mockup-container">
         <div className="mockup-texto">
           <p className="mockup-unete">Únete a MyBoya</p>
-          <button className="btn-crearcuenta">Crear cuenta</button>
+          <Link to="/registro"><button className="btn-crearcuenta">Crear cuenta</button></Link>
         </div>
         <div>
           <img className="mockup" src={mockupcito} alt="MockUp MyBoya" />

@@ -32,7 +32,7 @@ const navigate = useNavigate();
       email: email,
       password: password,
     };
-    fetch('http://localhost:3000/api/v1/createUser', {
+    fetch('http://localhost:3000/api/v1/user/createUser', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

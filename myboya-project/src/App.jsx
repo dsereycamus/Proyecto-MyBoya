@@ -13,13 +13,15 @@ import New from "./components/New/New";
 import Instrucciones from "./components/Inicio/Instrucciones";
 import GameLayout from "./layouts/GameLayout";
 import PartnersSection from "./components/Partners/Partners";
+import Noticias from "./components/Noticias/Noticias";
+import Cuenta from "./components/Cuenta/cuenta";
 
 function App() {
   return (
     <BrowserRouter>
       <ParticlesBackground />
       <Routes>
-        <Route path="*" element={<div>No hay página</div>} />
+      <Route path="*" element={<div>No hay página</div>} />
         <Route path="/" element={<GeneralLayout />}>
           <Route index element={<Inicio />} />
           <Route path="contacto" element={<Contacto />} />
@@ -30,6 +32,8 @@ function App() {
           <Route path="playground" element={<InicioQuiz />} />
           <Route path="instrucciones" element={<Instrucciones />} />
           <Route path="partners" element={<PartnersSection />} />
+          <Route path="noticias" element={<Noticias />} />
+          <Route path="cuenta" element={<Cuenta />} />
         </Route>
 
         <Route path="/quiz" element={<GameLayout />}>
