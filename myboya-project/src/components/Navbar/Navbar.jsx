@@ -30,6 +30,9 @@ const Navbar = () => {
           <li>
             <NavLink to="/partners">Partners</NavLink>
           </li>
+          <li>
+            <NavLink to ="/noticias">Noticia</NavLink>
+          </li>
           {isLoggedIn && (
             <li>
               <NavLink to="/playground">Noticias</NavLink>

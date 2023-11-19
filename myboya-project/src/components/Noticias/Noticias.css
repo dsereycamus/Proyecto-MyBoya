@@ -1,11 +1,11 @@
-div > img{
+#contenedorNoticias > img{
     border-radius: 8px;
     width: 100%;
     height: auto;
     box-shadow: 0px 0px 30px #000;
 }
 
-div {
+#contenedorNoticias {
     display: grid;
     grid-template-columns: 
     repeat(
