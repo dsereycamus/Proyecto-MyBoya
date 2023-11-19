@@ -13,6 +13,8 @@ import New from "./components/New/New";
 import Instrucciones from "./components/Inicio/Instrucciones";
 import GameLayout from "./layouts/GameLayout";
 import PartnersSection from "./components/Partners/Partners";
+import Cuenta from "./components/Cuenta/cuenta";
+import Personalizar from "./components/Cuenta/Personalizar";
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
           <Route path="playground" element={<InicioQuiz />} />
           <Route path="instrucciones" element={<Instrucciones />} />
           <Route path="partners" element={<PartnersSection />} />
+          <Route path="cuenta" element={<Cuenta />} />
+          <Route path="personalizar" element={<Personalizar />} />
         </Route>
 
         <Route path="/quiz" element={<GameLayout />}>
