@@ -1,0 +1,116 @@
+.fondoCuenta{
+padding: 50px 260px;
+}
+
+.containerCuenta{
+display: flex;
+gap: 30px;
+}
+
+.containerPerfil{
+display: block;
+background-color: #005cb2;
+border-radius: 50px;
+padding: 40px;
+}
+
+.circuloPerfil{
+width: 250px;
+height: 250px;
+border-radius: 100%;
+background-color: #80BACC;
+align-items: center;
+}
+
+.circulosColoresIcono{
+display: flex;
+flex-direction: row;
+gap: 8px;
+}
+
+.circuloColor1{
+width: 20px;
+height: 20px;
+border-radius: 100%;
+background-color: #80BACC;
+cursor: pointer;
+}
+
+.circuloColor2{
+width: 20px;
+height: 20px;
+border-radius: 100%;
+background-color: #78C36C;
+cursor: pointer;
+}
+
+.circuloColor3{
+width: 20px;
+height: 20px;
+border-radius: 100%;
+background-color: #CA80CC;
+cursor: pointer;
+}
+
+.circuloColor4{
+width: 20px;
+height: 20px;
+border-radius: 100%;
+background-color: #B23737;
+cursor: pointer;
+}
+
+.circuloColor5{
+width: 20px;
+height: 20px;
+border-radius: 100%;
+background-color: #FF8C00;
+cursor: pointer;
+}
+
+.circuloColor6{
+width: 20px;
+height: 20px;
+border-radius: 100%;
+background-color: #E3CE12;
+cursor: pointer;
+}
+
+/* inicio seccion Puntos e Insignias */
+.containerPuntos{
+background-color: #005cb2;
+border-radius: 50px;
+padding: 40px;
+align-items: center;
+}
+
+.circuloPerfil img{
+width: 220px;
+}
+
+.img-puntaje{
+width: 60px;
+}
+
+.misInsignias{
+display: flex;
+flex-direction: row;
+}
+
+.img-insignia{
+width: 80px;
+height: 80px;
+}
+
+.btn-volver{
+background-color: #005cb2;
+color: white;
+font-family: 'NATS';
+width: 220px;
+font-size: 20px;
+text-align: center;
+border: none;
+border-radius: 50px;
+cursor: pointer;
+margin: 30px;
+}

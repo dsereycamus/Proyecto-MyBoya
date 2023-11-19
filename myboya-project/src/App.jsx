@@ -14,6 +14,7 @@ import Instrucciones from "./components/Inicio/Instrucciones";
 import GameLayout from "./layouts/GameLayout";
 import PartnersSection from "./components/Partners/Partners";
 import Noticias from "./components/Noticias/Noticias";
+import Cuenta from "./components/Cuenta/cuenta";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="instrucciones" element={<Instrucciones />} />
           <Route path="partners" element={<PartnersSection />} />
           <Route path="noticias" element={<Noticias />} />
+          <Route path="cuenta" element={<Cuenta />} />
         </Route>
 
         <Route path="/quiz" element={<GameLayout />}>
