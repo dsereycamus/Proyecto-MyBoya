@@ -30,9 +30,15 @@ const Navbar = () => {
           <li>
             <NavLink to="/partners">Partners</NavLink>
           </li>
+<<<<<<< Updated upstream
+=======
+          <li>
+            <NavLink to="/noticias">Noticia</NavLink>
+          </li>
+>>>>>>> Stashed changes
           {isLoggedIn && (
             <li>
-              <NavLink to="/playground">Noticias</NavLink>
+              <NavLink to="/playground">Quiz</NavLink>
             </li>
           )}
           <li>
