@@ -28,7 +28,11 @@ const Sesion = () => {
         toast.success("Has iniciado sesión con éxito");
         navigate("/playground");
       } else {
-        toast.error("Inicio de sesión fallido. Verifica tus credenciales");
+        if (response === false) {
+          toast.error(
+            "Inicio de sesión fallido. Verifica tu correo o contraseña"
+          );
+        }
       }
     } catch (error) {
       toast.error("Error al procesar inicio de sesión. Inténtalo más tarde.");
