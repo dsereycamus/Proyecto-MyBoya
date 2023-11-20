@@ -20,8 +20,14 @@ export const SessionProvider = ({ children }) => {
       setUserData(response);
     }
 
-    if (response.status === 404) {
+    if (response.status === 401) {
       toast.warning("Tu cuenta ha sido bloqueada de forma temporal");
+      return false;
+    }
+
+    if (response.status !== 401 && response.status !== 200) {
+      toast.error("Inicio de sesión fallido. Verifica tu correo o contraseña");
+      return false;
     }
 
     return response.status === 200;
