@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
 import "./Registro.css";
 import { useNavigate } from "react-router-dom";
+import { useSession } from "../../context/useSession";
 
 const Registro = () => {
-const navigate = useNavigate();
+  const { login } = useSession();
+  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [createUser, setCreateUser] = useState(false);
-
 
   const handleName = (e) => {
     setName(e.target.value);
@@ -28,36 +29,38 @@ const navigate = useNavigate();
       return;
     }
     const user = {
-      name: name,
-      email: email,
-      password: password,
+      name,
+      email,
+      password,
     };
-    fetch('http://localhost:3000/api/v1/user/createUser', {
-      method: 'POST',
+    fetch("http://localhost:3000/api/v1/user/createUser", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(user),
-    }).then((response) => response.json())
-      .then((data) => {
+    })
+      .then((response) => response.json())
+      .then(async (data) => {
         console.log(data);
         setName("");
         setEmail("");
         setPassword("");
-        if (data.status === 201)
-        setCreateUser(true);
+        if (data.status === 201) {
+          setCreateUser(true);
+          await login(email, password);
+        }
       })
       .catch((error) => {
-        console.log('Error: ', error);
-    });
-  }
- 
-    useEffect(() => {
-    if (createUser){
-        navigate('/playground')
-        }
+        console.log("Error: ", error);
+      });
+  };
 
-    },[navigate, createUser])
+  useEffect(() => {
+    if (createUser) {
+      navigate("/playground");
+    }
+  }, [navigate, createUser]);
 
   return (
     <div className="containers-registro">
@@ -73,7 +76,14 @@ const navigate = useNavigate();
             <input type="password" id="password" onChange={handlePassword} />
           </div>
           <div className="btn-container-registro">
-            <button onClick={handleSubmit} type="button" className="btn-registro" id="submit">Crear cuenta</button>
+            <button
+              onClick={handleSubmit}
+              type="button"
+              className="btn-registro"
+              id="submit"
+            >
+              Crear cuenta
+            </button>
           </div>
         </form>
       </div>
