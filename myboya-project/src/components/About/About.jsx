@@ -7,10 +7,10 @@ import {Team} from './Team'
 const About = () => {
   return (
     <main className="about-container">
-      <h1 className="about__title">Quienes somos</h1>
+      {/* <h1 className="about__title">Quienes somos</h1> */}
+      <Team />
       <Mision />
       <Vision />
-      <Team />
     </main>
   );
 };
