@@ -1,0 +1,7 @@
+.right-seawhale-quiz {
+  /* bottom: -15%; */
+  position: absolute;
+  left: 50%;
+  user-select: none;
+  pointer-events: none;
+}
