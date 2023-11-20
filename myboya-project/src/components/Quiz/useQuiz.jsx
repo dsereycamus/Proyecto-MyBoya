@@ -1,7 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import { toast } from "react-toastify";
+import { useSession } from "../../context/useSession";
+import { updateScore as updateScoreService } from "../../services/updateScore";
 import { useState, useEffect } from "react";
 
 const useQuiz = () => {
+  const { token } = useSession();
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(undefined);
   const [showBar, setShowBar] = useState(true);
@@ -15,6 +19,16 @@ const useQuiz = () => {
     setTimer(30);
     setSelectedAnswer(undefined);
     setShowBar(true);
+  };
+
+  const updateScore = async () => {
+    const result = await updateScoreService(token, score);
+
+    if (result.status === 200) toast("Se ha actualizado tu puntaje!");
+
+    console.log("Updated");
+
+    return;
   };
 
   const resetQuestionsAnswered = () => {
@@ -64,6 +78,7 @@ const useQuiz = () => {
     questionsAnswered,
     resetQuestionsAnswered,
     showAdvertisement,
+    updateScore,
   };
 };
 

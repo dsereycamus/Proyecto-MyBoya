@@ -1,8 +1,19 @@
 const userService = require("../services/user.service.js");
 
 const delay = require("../helpers/delay.js");
+const { makeToken } = require("../helpers/makeToken.js");
 
 const authController = {
+  refreshToken: async (req, res) => {
+    const { userEmail } = req.headers;
+
+    const token = makeToken({ email: userEmail });
+
+    return res.status(200).json({
+      token,
+      status: 200,
+    });
+  },
   changeUserStatus: async (req, res) => {
     const { email } = req.body;
 
