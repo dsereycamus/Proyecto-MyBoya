@@ -7,6 +7,10 @@ display: flex;
 gap: 30px;
 }
 
+.miPerfil{
+font-size: 35px;
+}
+
 .containerPerfil{
 display: block;
 background-color: #005cb2;
@@ -15,11 +19,17 @@ padding: 40px;
 }
 
 .circuloPerfil{
+display: flex;
 width: 250px;
 height: 250px;
 border-radius: 100%;
 background-color: #80BACC;
 align-items: center;
+justify-content: center;
+}
+
+.estrella{
+width: 200px;
 }
 
 .circulosColoresIcono{
@@ -76,6 +86,26 @@ background-color: #E3CE12;
 cursor: pointer;
 }
 
+.opcionesUsuario{
+font-size: 18px;
+color: #d9d9d9;
+text-align: center;
+}
+
+.nombreUsuario{
+font-size: 25px;
+text-align: center;
+line-height: 25px;
+padding-top: 20px;
+}
+
+.emailUsuario{
+font-size: 20px;
+text-align: center;
+color: #80BACC;
+line-height: 15px;
+}
+
 /* inicio seccion Puntos e Insignias */
 .containerPuntos{
 background-color: #005cb2;
@@ -84,22 +114,47 @@ padding: 40px;
 align-items: center;
 }
 
-.circuloPerfil img{
-width: 220px;
-}
-
 .img-puntaje{
 width: 60px;
 }
 
-.misInsignias{
+.puntajeAcumulado{
+font-size: 22px;
+line-height: 30px;
+}
+
+.insigniasPerfil{
 display: flex;
 flex-direction: row;
 }
 
+.contenedor-insignia{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.misInsignias{
+font-size: 22px;
+line-height: 30px;
+padding-top: 50px;
+}
+
+.cantidadPuntajeAcumulado, .tituloInsignia{
+font-size: 20px;
+line-height: 15px;
+color: #03E2CC;
+}
+
 .img-insignia{
-width: 80px;
-height: 80px;
+width: 115px;
+height: 115px;
+}
+
+.tituloInsignia{
+font-size: 20px;
+color: #03E2CC;
+line-height: 25px;
 }
 
 .btn-volver{
