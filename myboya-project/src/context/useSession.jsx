@@ -1,6 +1,7 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useEffect, useState } from "react";
 import { login as loginService } from "../services/login";
+import { toast } from "react-toastify";
 
 // Crear un contexto
 const SessionContext = createContext();
@@ -18,6 +19,11 @@ export const SessionProvider = ({ children }) => {
       setIsLoggedIn(true);
       setUserData(response);
     }
+
+    if (response.status === 404) {
+      toast.warning("Tu cuenta ha sido bloqueada de forma temporal");
+    }
+
     return response.status === 200;
   };
 
