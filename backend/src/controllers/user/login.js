@@ -1,5 +1,6 @@
 const bcrypt = require("bcrypt");
 const User = require("../../models/user.model");
+const { makeToken } = require("../../helpers/makeToken");
 
 const loginUser = async (req, res) => {
   const { email, password } = req.body;
@@ -41,11 +42,13 @@ const loginUser = async (req, res) => {
       data: {
         name: findUser.name,
         lastName: findUser.lastName,
-        email: findUser.email,
+        email,
       },
+      token: makeToken({ email }),
     });
   } catch (error) {
-    console.log(500).json({
+    console.error(error);
+    return res.status(500).json({
       msg: "Error al loguear el usuario",
       status: 500,
     });

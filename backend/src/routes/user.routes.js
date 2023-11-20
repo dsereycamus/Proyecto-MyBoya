@@ -1,6 +1,10 @@
-const { createUser } = require("../controllers/user/createUser");
-const { updateUserById } = require("../controllers/user/updateUser");
-const { loginUser } = require("../controllers/user/login");
+const {
+  createUser,
+  updateUserById,
+  loginUser,
+  updateUserScore,
+} = require("../controllers/user.controller");
+const { checkToken } = require("../middleware");
 
 const router = require("express").Router();
 
@@ -11,5 +15,6 @@ router.post("/createUser", createUser);
 router.put("/update/:iduser", updateUserById);
 
 router.post("/login", loginUser);
+router.post("/updateScore", [checkToken, updateUserScore]);
 
 module.exports = router;
