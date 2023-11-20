@@ -68,27 +68,32 @@ function Cuenta() {
         <div className="containerPuntos">
           <div className="puntajePerfil">
             <img src={puntaje} className="img-puntaje"></img>
+            <div className="contenedorpuntajeAcumulado">
             <h2 className="puntajeAcumulado">PUNTAJE TOTAL ACUMULADO</h2>
             <p className="cantidadPuntajeAcumulado">50 Puntos</p>
+            </div>
           </div>
           <h2 className="misInsignias">MIS INSIGNIAS</h2>
           <div className="insigniasPerfil">
             <div className="contenedor-insignia">
               <img src={insignia1} className="img-insignia"></img>
               <p className="tituloInsignia">Aprendiz</p>
-{/*               <p>Consigue 50 puntos</p> */}
+              <p className="puntosFaltantesInsignia">Consigue 50 puntos</p>
             </div>
             <div className="contenedor-insignia">
               <img src={insignia2} className="img-insignia"></img>
               <p className="tituloInsignia">Principiante</p>
+              <p className="puntosFaltantesInsignia">Consigue 300 puntos</p>
             </div>
             <div className="contenedor-insignia">
               <img src={insignia3} className="img-insignia"></img>
               <p className="tituloInsignia">Intermedio</p>
+              <p className="puntosFaltantesInsignia">Consigue 1000 puntos</p>
             </div>
             <div className="contenedor-insignia">
               <img src={insignia4} className="img-insignia"></img>
               <p className="tituloInsignia">Avanzado</p>
+              <p className="puntosFaltantesInsignia">Consigue 1500 puntos</p>
             </div>
           </div>
         </div>
