@@ -7,7 +7,7 @@ const loginUser = async (req, res) => {
   if ((!email, !password)) {
     return res.status(400).json({
       msg: "Se requieren todos los campos",
-      status: 404,
+      status: 400,
     });
   }
 
@@ -22,7 +22,7 @@ const loginUser = async (req, res) => {
     if (findUser.status !== "active") {
       return res.status(401).json({
         msg: `Usuario con email ${email} no activo`,
-        status: 404,
+        status: 401,
       });
     }
 
@@ -31,7 +31,7 @@ const loginUser = async (req, res) => {
     if (!passVerify) {
       return res.status(400).json({
         msg: "Contraseña incorrecta",
-        status: 404,
+        status: 400,
       });
     }
 
