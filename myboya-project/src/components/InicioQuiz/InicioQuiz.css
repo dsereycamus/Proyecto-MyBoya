@@ -132,7 +132,9 @@ body {
   border: none;
   min-width: 17rem;
   padding-left: 1em;
+  font-size: 23px;
 }
+
 .ranking-insigniaa {
   color: white;
   display: flex;
@@ -144,6 +146,10 @@ body {
   border: none;
   min-width: 17rem;
   padding-left: 1em;
+  font-size: 23px;
+  line-height: 22px;
+  text-align: left;
+  cursor: pointer;
 }
 
 .datocurioso-contenedor {

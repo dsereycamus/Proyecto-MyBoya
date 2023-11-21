@@ -12,6 +12,7 @@ function Cuenta() {
   const navigate = useNavigate();
   const jugarQuiz = () => navigate("/playground");
 
+  /* Personalizar color ícono */
   const [color, setColor] = useState("#80BACC");
 
   const cambiarColor1 = () => {
@@ -43,6 +44,7 @@ function Cuenta() {
     const nuevoColor = "#E3CE12";
     setColor(nuevoColor);
   };
+  /* fin Personalizar color ícono */
 
   return (
     <div className="fondoCuenta">
