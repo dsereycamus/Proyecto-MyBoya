@@ -42,8 +42,10 @@ const Sesion = () => {
             <p>Inicia sesión con tu cuenta</p>
             <label htmlFor="email">Email</label>
             <input
+              name="email"
               type="text"
               id="email"
+              placeholder="Correo"
               value={email}
               onChange={handleEmailChange}
               required
@@ -52,8 +54,9 @@ const Sesion = () => {
             <input
               type="password"
               id="password"
-              style={{ color: "white" }}
+              placeholder="Contraseña"
               value={password}
+              style={{ fontFamily: "text-security-disc" }}
               onChange={handlePasswordChange}
               required
             />
