@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Registro.css";
 import { useNavigate } from "react-router-dom";
 import { useSession } from "../../context/useSession";
+import { toast } from "react-toastify";
 
 const Registro = () => {
   const { login } = useSession();
@@ -58,6 +59,7 @@ const Registro = () => {
 
   useEffect(() => {
     if (createUser) {
+      toast.success("Has creado tu cuenta con éxito");
       navigate("/playground");
     }
   }, [navigate, createUser]);
@@ -73,7 +75,13 @@ const Registro = () => {
             <label htmlFor="email">Email</label>
             <input type="email" id="email" onChange={handleEmail} />
             <label htmlFor="password">Contraseña</label>
-            <input type="password" id="password" onChange={handlePassword} />
+            <input
+              type="password"
+              id="password"
+              value={password}
+              style={{ fontFamily: "text-security-disc" }}
+              onChange={handlePassword}
+            />
           </div>
           <div className="btn-container-registro">
             <button
