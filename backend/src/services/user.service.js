@@ -21,6 +21,18 @@ const userService = {
       return undefined;
     }
   },
+  getScores: async () => {
+    try {
+      const result = await User.find({ score: { $gt: 0 } })
+        .sort({ score: -1 })
+        .limit(3);
+
+      return result;
+    } catch (e) {
+      console.error(e);
+      return undefined;
+    }
+  },
 };
 
 module.exports = userService;
