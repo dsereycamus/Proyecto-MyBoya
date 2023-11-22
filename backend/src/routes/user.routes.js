@@ -4,6 +4,7 @@ const {
   loginUser,
   updateUserScore,
   getUserScore,
+  getTopScores,
 } = require("../controllers/user.controller");
 const { checkToken } = require("../middleware");
 
@@ -17,5 +18,6 @@ router.put("/update/:iduser", updateUserById);
 
 router.post("/login", loginUser);
 router.post("/updateScore", [checkToken, updateUserScore]);
+router.get("/getTopScores", getTopScores);
 
 module.exports = router;

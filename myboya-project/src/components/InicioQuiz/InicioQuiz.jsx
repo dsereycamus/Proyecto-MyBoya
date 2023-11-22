@@ -1,24 +1,73 @@
 import "./InicioQuiz.css";
+import { useEffect, useState } from "react";
 import foto_ranking from "../../assets/Icons/ranking.png";
 import foto_pezpregunta from "../../assets/Images/pezpregunta.png";
 import foto_olas from "../../assets/Icons/ola+algas.png";
 import { useNavigate } from "react-router-dom";
+import { getTopScores } from "../../services/getTopScore";
 
 const InicioQuiz = () => {
+  const [topScores, setTopScores] = useState([]);
+  const [popOverVisible, setPopOverVisible] = useState(false);
   const navigate = useNavigate();
+
+  const getScores = async () => {
+    const result = await getTopScores();
+    setTopScores(result.data);
+  };
 
   const startQuiz = () => navigate("/quiz");
   const comoJugar = () => navigate("/instrucciones");
+  const cuenta = () => navigate("/cuenta");
+
+  const togglePopOver = () => {
+    setPopOverVisible(!popOverVisible);
+  };
+
+  useEffect(() => {
+    getScores();
+  }, []);
 
   return (
     <>
       <div className="container">
         <div className="rank">
-          <button className="ranking ranking-insignia">
+          <button className="ranking ranking-insignia" onClick={togglePopOver}>
             Ranking <img src={foto_ranking} alt="icono del ranking" />
           </button>
-          <button className="insignia ranking-insigniaa">
-          Consigue tu insignia
+          <div className={`pop-over ${popOverVisible ? "visible" : ""}`}>
+            <p>Ranking de Puntos</p>
+            {topScores.map((score, idx) => (
+              <div
+                key={score.email}
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "50% 50%",
+                  width: "250px",
+                }}
+              >
+                <p style={{ color: "var(--clr-orange)" }}>
+                  {score.score} puntos
+                </p>
+                <p
+                  style={{
+                    display: "flex",
+                    gap: "8px",
+                    justifyContent: "flex-start",
+                  }}
+                >
+                  <span style={{ color: "var(--clr-orange-dark)" }}>
+                    #{idx + 1}
+                  </span>
+                  {score.name}
+                </p>
+              </div>
+            ))}
+          </div>
+          <button onClick={cuenta} className="insignia ranking-insigniaa">
+            Desbloquea
+            <br />
+            insignias
             <img src={foto_pezpregunta} alt="icono de la insignia" />
           </button>
         </div>
@@ -27,11 +76,13 @@ const InicioQuiz = () => {
         <div className="InicioQuiz">
           <div>
             <button onClick={startQuiz} className="btnplay">
-            Jugar
+              Jugar
             </button>
           </div>
           <div>
-            <button onClick={comoJugar} className="btnwho">¿Cómo Jugar?</button>
+            <button onClick={comoJugar} className="btnwho">
+              ¿Cómo Jugar?
+            </button>
           </div>
         </div>
       </div>

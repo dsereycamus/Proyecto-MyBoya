@@ -9,6 +9,21 @@ module.exports = {
   createUser,
   loginUser,
   updateUserById,
+  getTopScores: async (_req, res) => {
+    try {
+      const scores = await userService.getScores();
+
+      return res.status(200).send({
+        data: scores,
+        msg: "Se encontró el top 3 de resultados",
+        status: 200,
+      });
+    } catch (e) {
+      return res
+        .status(500)
+        .send({ error: e, msg: "Hubo un error al conseguir los puntajes." });
+    }
+  },
   updateUserScore: async (req, res) => {
     const { userEmail } = req.headers;
     const { score } = req.body;
