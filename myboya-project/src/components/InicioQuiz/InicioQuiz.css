@@ -6,8 +6,6 @@ body {
   background-color: #032d59;
 }
 
-
-
 .container {
   display: flex;
   background-color: #032d59;
@@ -56,7 +54,7 @@ body {
   padding: auto;
   border-radius: 2.5rem;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   cursor: pointer;
   position: relative;
   overflow: hidden;
@@ -64,10 +62,14 @@ body {
   transition: transform 0.3s ease;
 }
 
-.btnplay:after{
+.btnplay:after {
   content: "";
   position: absolute;
-  background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
   width: 100%;
   height: 300%;
   top: -100%;
@@ -76,7 +78,7 @@ body {
   transition: opacity 0.3s;
 }
 
-.btnplay:active{
+.btnplay:active {
   transform: translateY(0.25rem);
   transform: scale(1.1);
 }
@@ -95,7 +97,7 @@ body {
   align-items: center;
   transition: transform 0.3s ease;
 }
-.btnwho:active{
+.btnwho:active {
   transform: translateY(0.25rem);
   transform: scale(1.1);
 }
@@ -202,14 +204,14 @@ body {
   width: 60%;
   max-width: 50rem;
 }
-@media screen and (max-width:1024px) {
-  .InicioQuiz{
+@media screen and (max-width: 1024px) {
+  .InicioQuiz {
     margin-top: 80px;
   }
   .container {
     margin-left: 20px;
   }
-  .rank{
+  .rank {
     margin-top: 50px;
   }
   .btnwho {
@@ -222,15 +224,28 @@ body {
     height: 4.8125rem;
     font-size: 30px;
   }
-  .fondo-olas{
+  .fondo-olas {
     display: none;
   }
 
-  .foto-ola{
+  .foto-ola {
     display: none;
   }
-  .datocurioso{
+  .datocurioso {
     display: none;
   }
 }
 
+.pop-over {
+  display: none;
+  position: absolute;
+  border-radius: 3rem;
+  background-color: rgba(0, 78, 151, 0.9);
+  padding: 10px;
+  right: 7%;
+  transform: translateX(-100%);
+}
+
+.pop-over.visible {
+  display: block;
+}

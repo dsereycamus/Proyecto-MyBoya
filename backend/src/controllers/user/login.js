@@ -42,6 +42,7 @@ const loginUser = async (req, res) => {
       data: {
         name: findUser.name,
         lastName: findUser.lastName,
+        score: findUser.score,
         email,
       },
       token: makeToken({ email }),

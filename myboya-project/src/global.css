@@ -1,13 +1,15 @@
-@import url('https://fonts.cdnfonts.com/css/nats');   
-@import url('https://fonts.cdnfonts.com/css/roboto');
+@import url("https://fonts.cdnfonts.com/css/nats");
+@import url("https://fonts.cdnfonts.com/css/roboto");
 
-*,*::before,*::after{
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
-*{
+* {
   margin: 0;
   padding: 0;
-  font-family: 'NATS', sans-serif;
+  font-family: "NATS", sans-serif;
 }
 
 *,
@@ -41,6 +43,7 @@ video {
   /* COLORS */
   --clr-white: #ffffff;
   --clr-orange: #ff8c00;
+  --clr-orange-dark: #d36500;
   --clr-blue: #032d59;
   --clr-deep-blue: #00214b;
   /* FONTS */
@@ -51,7 +54,6 @@ video {
   --font-normal: 1rem;
   --font-sm: 0.75rem;
 }
-
 
 .text-center {
   text-align: center;
@@ -66,4 +68,3 @@ video {
   display: flex;
   justify-content: center;
 }
-
