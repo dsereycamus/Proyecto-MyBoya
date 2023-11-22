@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./cuenta.css";
 import estrella from "../../assets/Images/estrella.png";
 import puntaje from "../../assets/Images/puntaje.png";
@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { useSession } from "../../context/useSession";
 
 function Cuenta() {
-  const { userData } = useSession();
+  const { userData, reload } = useSession();
   const navigate = useNavigate();
   const jugarQuiz = () => navigate("/playground");
 
@@ -48,6 +48,10 @@ function Cuenta() {
   };
   /* fin Personalizar color ícono */
 
+  useEffect(() => {
+    reload();
+  }, []);
+
   return (
     <div className="fondoCuenta">
       <h1 className="miPerfil">Mi perfil</h1>
@@ -77,7 +81,6 @@ function Cuenta() {
               <p className="cantidadPuntajeAcumulado">
                 {userData?.score ?? 0} Puntos
               </p>
-
             </div>
           </div>
           <h2 className="misInsignias">MIS INSIGNIAS</h2>
