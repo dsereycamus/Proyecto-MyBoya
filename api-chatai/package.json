@@ -1,0 +1,13 @@
+{
+  "name": "api-chatai",
+  "version": "1.0.0",
+  "description": "Es un chat para los usuarios de boyacraft.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Sáez",
+  "license": "ISC"
+}
