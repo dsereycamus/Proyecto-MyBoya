@@ -136,7 +136,10 @@ const preguntas = [
     titulo:
       "<span style='color: #FF8C00;'>¿</span>Qué organismo gubernamental en Chile se encarga de regular y supervisar la pesca y acuicultura<span style='color: #FF8C00;'>?</span>",
     opciones: [
-      { textoRespuesta: "Servicio Nacional de Turismo (SERNATUR)", isCorrect: false },
+      {
+        textoRespuesta: "Servicio Nacional de Turismo (SERNATUR)",
+        isCorrect: false,
+      },
       {
         textoRespuesta: "Ministerio de Energía",
         isCorrect: false,

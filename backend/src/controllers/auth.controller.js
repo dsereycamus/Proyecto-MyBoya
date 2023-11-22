@@ -1,8 +1,22 @@
 const userService = require("../services/user.service.js");
 
 const delay = require("../helpers/delay.js");
+const { makeToken } = require("../helpers/makeToken.js");
 
 const authController = {
+  refreshToken: async (req, res) => {
+    const { userEmail } = req.headers;
+
+    const token = makeToken({ email: userEmail });
+
+    const user = await userService.findOneByParam({ email: userEmail });
+
+    return res.status(200).json({
+      token,
+      userData: { ...user._doc, password: undefined },
+      status: 200,
+    });
+  },
   changeUserStatus: async (req, res) => {
     const { email } = req.body;
 

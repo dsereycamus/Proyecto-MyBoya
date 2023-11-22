@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import preguntas from "./preguntas";
 import useQuiz from "./useQuiz";
 import "./quiz.css";
@@ -6,6 +7,7 @@ import Modal from "../Modal/Modal";
 import whaler from "../../assets/Images/whale-right.png";
 import whalel from "../../assets/Images/whale-left.png";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 function Quiz() {
   const {
@@ -18,9 +20,16 @@ function Quiz() {
     currentQuestion,
     resetQuestionsAnswered,
     showAdvertisement,
+    updateScore,
   } = useQuiz();
 
   const isFinished = currentQuestion === preguntas.length;
+
+  useEffect(() => {
+    if (currentQuestion === preguntas.length) {
+      updateScore();
+    }
+  }, [currentQuestion]);
 
   if (isFinished)
     return (
@@ -30,14 +39,16 @@ function Quiz() {
             <span className="you-got">Conseguiste </span>{" "}
             <span className="score">{score} puntos</span>{" "}
             <img src={whalel} className="whale-left" alt="whale-left" />
-            <img src={whaler} className="whale-right"alt="whale-right" />
+            <img src={whaler} className="whale-right" alt="whale-right" />
           </div>
-          <Link to="/playground"><button
-            className="quiz-button play-button"
-            // onClick={() => window.location.reload()}
-          >
-            Volver a jugar
-          </button></Link>
+          <Link to="/playground">
+            <button
+              className="quiz-button play-button"
+              // onClick={() => window.location.reload()}
+            >
+              Volver a jugar
+            </button>
+          </Link>
         </div>
       </section>
     );
@@ -61,7 +72,10 @@ function Quiz() {
           />
         </div>
       </div>
-      <div className="alternatives" style={{ lineHeight: 1, textAlign: "center" }}>
+      <div
+        className="alternatives"
+        style={{ lineHeight: 1, textAlign: "center" }}
+      >
         {preguntas[currentQuestion].opciones.map((respuesta, idx) => (
           <button
             className="quiz-button"

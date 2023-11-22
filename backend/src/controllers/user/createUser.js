@@ -1,5 +1,6 @@
 const bcrypt = require("bcrypt");
 const User = require("../../models/user.model");
+const { makeToken } = require("../../helpers/makeToken");
 
 const createUser = async (req, res) => {
   const { name, email, password } = await req.body;
@@ -14,8 +15,9 @@ const createUser = async (req, res) => {
   // Fin validación
 
   // Validación si es que ya está registrado.
-  const emailBd = await User.findOne({email: `${email}`}).exec()
-  if(emailBd !== null){
+  const emailBd = await User.findOne({ email: `${email}` }).exec();
+
+  if (emailBd !== null) {
     return res.status(409).json({
       msg: "Ya existe una cuenta con este correo.",
       status: 409,
@@ -31,9 +33,13 @@ const createUser = async (req, res) => {
       email: email,
       password: bcrypt.hashSync(password, salt),
     });
+
+    const token = makeToken({ email });
+
     res.status(201).json({
       msg: "Usuario creado.",
       status: 201,
+      token,
     });
   } catch (err) {
     console.log(err);
