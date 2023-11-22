@@ -13,6 +13,8 @@ const userSchema = new Schema({
     default: "active",
   },
   points: { type: Number, default: 0 },
+  color: { type: String, default: '#80BACC' },
+  badge: {type: String, default: 'https://res.cloudinary.com/dnyyueowi/image/upload/c_scale,w_300/f_auto/q_auto/myboya/Badge/insignia0.png' }
 });
 // Creación del modelo
 const User = mongoose.model("User", userSchema);
