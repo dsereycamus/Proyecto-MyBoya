@@ -242,10 +242,15 @@ body {
   border-radius: 3rem;
   background-color: rgba(0, 78, 151, 0.9);
   padding: 10px;
-  right: 7%;
+  right: 3%;
   transform: translateX(-100%);
+  line-height: 1.2;
 }
 
 .pop-over.visible {
   display: block;
+}
+
+.ranking-title {
+  font-size: 25px;
 }
