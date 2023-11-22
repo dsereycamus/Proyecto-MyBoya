@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./cuenta.css";
 import estrella from "../../assets/Images/estrella.png";
 import puntaje from "../../assets/Images/puntaje.png";
@@ -7,8 +7,10 @@ import insignia2 from "../../assets/Images/insignia2.png";
 import insignia3 from "../../assets/Images/insignia3.png";
 import insignia4 from "../../assets/Images/insignia4.png";
 import { useNavigate } from "react-router-dom";
+import { useSession } from "../../context/useSession";
 
 function Cuenta() {
+  const { userData } = useSession();
   const navigate = useNavigate();
   const jugarQuiz = () => navigate("/playground");
 
@@ -59,24 +61,28 @@ function Cuenta() {
           </div>
           <p className="opcionesUsuario">Personaliza tu ícono</p>
           <div style={{ backgroundColor: color }} className="circuloPerfil">
-          <img src={estrella} className="estrella"></img>
+            <img src={estrella} className="estrella"></img>
           </div>
-          <h2 className="nombreUsuario">Nombre Usuario</h2>
-          <p className="emailUsuario">email@email.com</p>
+          <h2 className="nombreUsuario">{userData?.name ?? ""}</h2>
+          <p className="emailUsuario">{userData?.email ?? ""}</p>
           <p className="opcionesUsuario">Modificar mis datos</p>
         </div>
         <div className="containerPuntos">
           <div className="puntajePerfil">
             <img src={puntaje} className="img-puntaje"></img>
-            <h2 className="puntajeAcumulado">PUNTAJE TOTAL ACUMULADO</h2>
-            <p className="cantidadPuntajeAcumulado">50 Puntos</p>
+            <div className="contenedorpuntajeAcumulado">
+              <h2 className="puntajeAcumulado">PUNTAJE TOTAL ACUMULADO</h2>
+              <p className="cantidadPuntajeAcumulado">
+                {userData?.score ?? 0} Puntos
+              </p>
+            </div>
           </div>
           <h2 className="misInsignias">MIS INSIGNIAS</h2>
           <div className="insigniasPerfil">
             <div className="contenedor-insignia">
               <img src={insignia1} className="img-insignia"></img>
               <p className="tituloInsignia">Aprendiz</p>
-{/*               <p>Consigue 50 puntos</p> */}
+              {/*               <p>Consigue 50 puntos</p> */}
             </div>
             <div className="contenedor-insignia">
               <img src={insignia2} className="img-insignia"></img>

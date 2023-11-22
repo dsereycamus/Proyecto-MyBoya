@@ -49,6 +49,7 @@ export const SessionProvider = ({ children }) => {
     if (result.status === 200) {
       setIsLoggedIn(true);
       setToken(result.token);
+      setUserData(result.userData);
     } else {
       setIsLoggedIn(false);
       setToken();
