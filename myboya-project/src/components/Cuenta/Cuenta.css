@@ -180,8 +180,15 @@ color: #FF8C00;
 line-height: 15px;
 }
 
-.btn-volver{
+.botones-cuenta{
 display: flex;
+flex-direction: row;
+gap: 1rem;
+}
+
+.btn-cuenta{
+display: flex;
+flex-direction: row;
 background-color: #005cb2;
 color: white;
 font-family: 'NATS';

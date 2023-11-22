@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./cuenta.css";
 import estrella from "../../assets/Images/estrella.png";
 import puntaje from "../../assets/Images/puntaje.png";
@@ -77,7 +77,6 @@ function Cuenta() {
               <p className="cantidadPuntajeAcumulado">
                 {userData?.score ?? 0} Puntos
               </p>
-
             </div>
           </div>
           <h2 className="misInsignias">MIS INSIGNIAS</h2>
@@ -105,9 +104,10 @@ function Cuenta() {
           </div>
         </div>
       </div>
-      <button onClick={jugarQuiz} className="btn-volver">
-        Volver a página principal
-      </button>
+      <div className="botones-cuenta">
+        <button className="btn-cuenta">Guardar cambios</button>
+        <button onClick={jugarQuiz} className="btn-cuenta">Volver a página principal</button>
+      </div>
     </div>
   );
 }
