@@ -14,6 +14,7 @@ function Cuenta() {
   const navigate = useNavigate();
   const jugarQuiz = () => navigate("/playground");
 
+  /* Personalizar color ícono */
   const [color, setColor] = useState("#80BACC");
 
   const cambiarColor1 = () => {
@@ -45,6 +46,7 @@ function Cuenta() {
     const nuevoColor = "#E3CE12";
     setColor(nuevoColor);
   };
+  /* fin Personalizar color ícono */
 
   return (
     <div className="fondoCuenta">
@@ -75,6 +77,7 @@ function Cuenta() {
               <p className="cantidadPuntajeAcumulado">
                 {userData?.score ?? 0} Puntos
               </p>
+
             </div>
           </div>
           <h2 className="misInsignias">MIS INSIGNIAS</h2>
@@ -82,19 +85,22 @@ function Cuenta() {
             <div className="contenedor-insignia">
               <img src={insignia1} className="img-insignia"></img>
               <p className="tituloInsignia">Aprendiz</p>
-              {/*               <p>Consigue 50 puntos</p> */}
+              <p className="puntosFaltantesInsignia">Consigue 50 puntos</p>
             </div>
             <div className="contenedor-insignia">
               <img src={insignia2} className="img-insignia"></img>
               <p className="tituloInsignia">Principiante</p>
+              <p className="puntosFaltantesInsignia">Consigue 300 puntos</p>
             </div>
             <div className="contenedor-insignia">
               <img src={insignia3} className="img-insignia"></img>
               <p className="tituloInsignia">Intermedio</p>
+              <p className="puntosFaltantesInsignia">Consigue 1000 puntos</p>
             </div>
             <div className="contenedor-insignia">
               <img src={insignia4} className="img-insignia"></img>
               <p className="tituloInsignia">Avanzado</p>
+              <p className="puntosFaltantesInsignia">Consigue 1500 puntos</p>
             </div>
           </div>
         </div>

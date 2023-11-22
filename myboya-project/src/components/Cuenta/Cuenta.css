@@ -1,9 +1,13 @@
 .fondoCuenta{
-padding: 50px 260px;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 1rem;
 }
 
 .containerCuenta{
 display: flex;
+justify-content: center;
 gap: 30px;
 }
 
@@ -35,6 +39,7 @@ width: 200px;
 .circulosColoresIcono{
 display: flex;
 flex-direction: row;
+justify-content: center;
 gap: 8px;
 }
 
@@ -110,17 +115,27 @@ line-height: 15px;
 .containerPuntos{
 background-color: #005cb2;
 border-radius: 50px;
-padding: 40px;
+padding: 60px;
 align-items: center;
 }
 
 .img-puntaje{
-width: 60px;
+width: 70px;
+}
+
+.puntajePerfil{
+display: flex;
+flex-direction: row;
+}
+
+.contenedorpuntajeAcumulado{
+padding-left: 20px;
+padding-top: 15px;
 }
 
 .puntajeAcumulado{
 font-size: 22px;
-line-height: 30px;
+line-height: 20px;
 }
 
 .insigniasPerfil{
@@ -132,12 +147,14 @@ flex-direction: row;
 display: flex;
 flex-direction: column;
 align-items: center;
+padding-right: 10px;
 }
 
 .misInsignias{
 font-size: 22px;
 line-height: 30px;
-padding-top: 50px;
+padding-top: 65px;
+padding-bottom: 30px;
 }
 
 .cantidadPuntajeAcumulado, .tituloInsignia{
@@ -157,7 +174,14 @@ color: #03E2CC;
 line-height: 25px;
 }
 
+.puntosFaltantesInsignia{
+font-size: 18px;
+color: #FF8C00;
+line-height: 15px;
+}
+
 .btn-volver{
+display: flex;
 background-color: #005cb2;
 color: white;
 font-family: 'NATS';
@@ -167,5 +191,5 @@ text-align: center;
 border: none;
 border-radius: 50px;
 cursor: pointer;
-margin: 30px;
+justify-content: center;
 }
