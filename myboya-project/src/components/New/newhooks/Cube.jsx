@@ -12,8 +12,9 @@ export function Cube({id, position, texture}){
     type:'Static',
     position
   }))
-
-  const activeTexture = textures[texture + 'Texture']
+  console.log(textures, texture)
+  const activeTexture = textures[texture[0] + 'Texture']
+  console.log({activeTexture}) 
   return (
     <mesh
     onPointerMove={(e) => {
@@ -26,7 +27,7 @@ export function Cube({id, position, texture}){
     }}
     ref={ref}
     onClick={(e) => {
-      e.stopPropagation
+      e.stopPropagation()
       if(e.button == 2){
         removeCube(id)
       }
@@ -38,7 +39,7 @@ export function Cube({id, position, texture}){
     }}
     >
       <boxGeometry attach='geometry' />
-      <meshStandardMaterial 
+      <meshLambertMaterial 
         color={isHovered ? 'grey' : 'white'}
         transparent
         map={activeTexture} 

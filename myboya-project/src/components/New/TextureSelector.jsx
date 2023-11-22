@@ -22,9 +22,10 @@ export function TextureSelector() {
       wood,
       log
     }
-    const [selectedTexture] = Object
+    const selectedTexture = Object
       .entries(options)
       .find(([texture, isEnabled]) => isEnabled ) ?? texture
+      console.log(selectedTexture)
       if(selectedTexture){
         const [textureName] = selectedTexture
         setTexture(textureName)
