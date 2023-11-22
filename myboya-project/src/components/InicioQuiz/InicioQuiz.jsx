@@ -36,17 +36,17 @@ const InicioQuiz = () => {
             Ranking <img src={foto_ranking} alt="icono del ranking" />
           </button>
           <div className={`pop-over ${popOverVisible ? "visible" : ""}`}>
-            <p>Ranking de Puntos</p>
+            <p className="ranking-title">Ranking de Puntos</p>
             {topScores.map((score, idx) => (
               <div
                 key={score.email}
                 style={{
                   display: "grid",
                   gridTemplateColumns: "50% 50%",
-                  width: "250px",
+                  width: "300px",
                 }}
               >
-                <p style={{ color: "var(--clr-orange)" }}>
+                <p style={{ color: "var(--clr-orange)", fontSize: "20px" }}>
                   {score.score} puntos
                 </p>
                 <p
@@ -54,6 +54,7 @@ const InicioQuiz = () => {
                     display: "flex",
                     gap: "8px",
                     justifyContent: "flex-start",
+                    fontSize: "20px",
                   }}
                 >
                   <span style={{ color: "var(--clr-orange-dark)" }}>
