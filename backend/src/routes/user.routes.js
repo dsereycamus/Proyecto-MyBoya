@@ -3,6 +3,7 @@ const {
   updateUserById,
   loginUser,
   updateUserScore,
+  getUserScore,
 } = require("../controllers/user.controller");
 const { checkToken } = require("../middleware");
 

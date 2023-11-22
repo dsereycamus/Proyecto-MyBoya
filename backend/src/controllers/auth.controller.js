@@ -9,8 +9,11 @@ const authController = {
 
     const token = makeToken({ email: userEmail });
 
+    const user = await userService.findOneByParam({ email: userEmail });
+
     return res.status(200).json({
       token,
+      userData: { ...user._doc, password: undefined },
       status: 200,
     });
   },
