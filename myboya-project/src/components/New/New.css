@@ -36,3 +36,12 @@
 .texture-selector img.selected{
   border-color: var(--clr-orange);
 }
+.chatai-container{
+  position: absolute;
+  bottom: 12rem;
+  right: 1.5rem;
+  z-index: 3;
+}
+.chatai-form button{
+  padding: 0em .65em;
+}

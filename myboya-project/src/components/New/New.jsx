@@ -7,6 +7,7 @@ import { Fpv } from "./FPV";
 import { Player } from "./Player";
 import { Cubes } from "./Cubes";
 import { TextureSelector } from "./TextureSelector";
+import { Chatai } from "./Chatai";
 function New() {
   return (
     <div className="boyacraft">
@@ -22,6 +23,7 @@ function New() {
       </Canvas>
       <div className="pointer">+</div>
       <TextureSelector />
+      <Chatai />
     </div>
   );
 }
