@@ -9,16 +9,20 @@ const InicioQuiz = () => {
 
   const startQuiz = () => navigate("/quiz");
   const comoJugar = () => navigate("/instrucciones");
+  const cuenta = () => navigate("/cuenta");
 
   return (
     <>
       <div className="container">
         <div className="rank">
           <button className="ranking ranking-insignia">
-            Ranking <img src={foto_ranking} alt="icono del ranking" />
+            Ranking
+            <img src={foto_ranking} alt="icono del ranking" />
           </button>
-          <button className="insignia ranking-insigniaa">
-          Consigue tu insignia
+          <button onClick={cuenta} className="insignia ranking-insigniaa">
+          Desbloquea
+          <br /> 
+          insignias
             <img src={foto_pezpregunta} alt="icono de la insignia" />
           </button>
         </div>

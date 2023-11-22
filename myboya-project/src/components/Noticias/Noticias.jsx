@@ -27,7 +27,6 @@ const Noticias = () => {
             <a href="https://www.greenpeace.org/international/publication/28181/turtles-under-threat/">
             <img src="https://www.greenpeace.org/static/planet4-international-stateless/2020/01/5fd7335d-screen-shot-2020-01-14-at-13.43.45.png" alt="turtles under threat greenpeace imagen" />
             </a>
-            
         </div>
 );
 }
