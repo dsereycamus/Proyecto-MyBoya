@@ -2,6 +2,7 @@ import React from 'react'
 import logo from '../../assets/Images/myboya-logo.png'
 import './GameNav.css';
 import { useNavigate, NavLink, Link } from "react-router-dom";
+import { useSession } from "../../context/useSession";
 
 export default function GameNav() {
 
@@ -29,7 +30,9 @@ export default function GameNav() {
                         <NavLink to="/about">Nosotros</NavLink>
                     </li>
                 </ul> */}
+                <Link to="/cuenta">
                 <button className='btn-gamenav2'>Cuenta</button>
+                </Link>
                 {isLoggedIn ? (
                     <div className="btn-registro-nav">
                         <button onClick={logout}>Cerrar sesión</button>
