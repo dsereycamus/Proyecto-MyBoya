@@ -47,6 +47,11 @@ const Navbar = () => {
               <NavLink to="/playground">Quiz</NavLink>
             </li>
           )}
+          {isLoggedIn && (
+            <li>
+              <NavLink to="/new">BoyaCraft</NavLink>
+            </li>
+          )}
           <li>
             <NavLink to="/contacto">Contacto</NavLink>
           </li>

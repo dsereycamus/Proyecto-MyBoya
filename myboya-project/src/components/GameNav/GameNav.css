@@ -14,6 +14,18 @@
 }
 
 .btn-gamenav {
+    padding: 0.2rem 2rem;
+    justify-content: end;
+    color: #032D59;
+    border-radius: 3rem;
+    background-color: #80bacc;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.btn-gamenav2 {
     padding: 0.2rem 3rem;
     justify-content: end;
     color: #032D59;

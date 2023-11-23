@@ -89,33 +89,7 @@ header .nav-btn {
     opacity: 0;
 }
 
-@media (max-width: 890px) {
-    .header-navbar .listaNav li {
-        padding: 0 .50rem;
-    }
-}
-
-@media (max-width: 1112px) {
-    .header-navbar {
-        padding: 0.1rem 5%;
-    }
-    .header-navbar .logoNav img {
-        height: 4.6rem;
-    }
-    .header-navbar .btn-registro-nav button {
-        margin-right: .5rem;
-        margin-left: .25rem;
-        font-weight: 500;
-        padding: 0.5rem 1rem; 
-    } 
-    .header-navbar .btn-sesion-nav button {
-        margin-left: .25rem;
-        font-weight: 600;
-        padding: 0.5rem 1rem;
-    }
-}
-
-@media (max-width: 784px) {
+@media (max-width: 1000px) {
     header .nav-btn {
         visibility: visible;
         opacity: 1;
@@ -186,3 +160,24 @@ header .nav-btn {
         z-index: 11;
    }
 }
+
+@media (max-width: 1112px) {
+    .header-navbar {
+        padding: 0.1rem 5%;
+    }
+    .header-navbar .logoNav img {
+        height: 4.6rem;
+    }
+    .header-navbar .btn-registro-nav button {
+        margin-right: .25rem;
+        margin-left: .25rem;
+        font-weight: 500;
+        padding: 0.5rem 1rem; 
+    } 
+    .header-navbar .btn-sesion-nav button {
+        margin-left: .25rem;
+        font-weight: 600;
+        padding: 0.1rem .25rem;
+    }
+}
+
