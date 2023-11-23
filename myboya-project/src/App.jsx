@@ -14,7 +14,7 @@ import Instrucciones from "./components/Inicio/Instrucciones";
 import GameLayout from "./layouts/GameLayout";
 import PartnersSection from "./components/Partners/Partners";
 import Noticias from "./components/Noticias/Noticias";
-import Cuenta from "./components/Cuenta/cuenta";
+import Cuenta from "./components/Cuenta/Cuenta";
 import QuizLayout from "./layouts/QuizLayout";
 
 function App() {
