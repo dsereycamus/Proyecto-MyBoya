@@ -1,11 +1,11 @@
 import { Outlet } from "react-router-dom";
-import Navbar from "../components/Navbar/Navbar";
 import GameFooter from "../components/GameFooter/GameFooter";
+import GameNav from "../components/GameNav/GameNav";
 
 const GameLayout = () => {
   return (
     <main>
-      <Navbar />
+      <GameNav />
       <div style={{ minHeight: "65vh" }}>
         <Outlet />
       </div>
