@@ -28,7 +28,7 @@ const Navbar = () => {
           <img src={logo} alt="Logo MyBoya" />
         </Link>
       </div>
-      <nav ref={navRef}>
+      <nav className="listaprub" ref={navRef}>
         <ul className="listaNav">
           <li>
             <NavLink to="/">Inicio</NavLink>
@@ -40,7 +40,7 @@ const Navbar = () => {
             <NavLink to="/partners">Partners</NavLink>
           </li>
           <li>
-            <NavLink to="/noticias">Noticia</NavLink>
+            <NavLink to="/noticias">Noticias</NavLink>
           </li>
           {isLoggedIn && (
             <li>

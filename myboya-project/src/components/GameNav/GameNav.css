@@ -1,0 +1,55 @@
+.header-navgame {
+    background-color: #032D59;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7.5rem;
+    padding: 0.3rem 10%;
+}
+
+.header-navgame  img {
+    height: 5.6rem;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.btn-gamenav {
+    padding: 0.2rem 3rem;
+    justify-content: end;
+    color: #032D59;
+    border-radius: 3rem;
+    background-color: #80bacc;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.letter-o {
+    color: var(--clr-orange);
+    font-size:50px;
+}
+
+.title-navgame {
+    font-size: 50px;
+}
+
+.listaNav2 {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(orange);
+    visibility: hidden;
+    opacity: 0;
+    text-decoration: none;
+}
+
+.btn-gamenav button{
+    visibility: visible;
+        opacity: 1;
+}
+
+div .show {
+    transform: none;
+}
