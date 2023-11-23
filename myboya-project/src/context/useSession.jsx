@@ -66,7 +66,7 @@ export const SessionProvider = ({ children }) => {
 
   return (
     <SessionContext.Provider
-      value={{ isLoggedIn, userData, login, logout, token }}
+      value={{ isLoggedIn, userData, login, logout, token, reload: refresh }}
     >
       {children}
     </SessionContext.Provider>

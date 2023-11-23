@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { useSession } from "../../context/useSession";
 
 function Cuenta() {
-  const { userData } = useSession();
+  const { userData, reload } = useSession();
   const navigate = useNavigate();
   const jugarQuiz = () => navigate("/playground");
   const puntaje = userData?.score ?? 0;
@@ -25,6 +25,10 @@ function Cuenta() {
   const cambiarColor5 = () => setColor("#FF8C00");
   const cambiarColor6 = () => setColor("#E3CE12");
   /* fin Personalizar color ícono */
+
+  useEffect(() => {
+    reload();
+  }, []);
 
   return (
     <div className="fondoCuenta">

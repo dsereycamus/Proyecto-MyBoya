@@ -78,13 +78,14 @@ body {
   flex-direction: column;
 }
 
-.form-label{
+.form-label {
   font-size: 17px;
   color: #ffffff;
   margin-bottom: 0.625rem;
 }
 
-.form-input,.form-textarea {
+.form-input,
+.form-textarea {
   padding: 17px 14px;
   background-color: var(--clr-blue, #032d59);
   border: 1px solid white;
@@ -111,7 +112,7 @@ body {
 
 .cuchara-image,
 .tenedor-image,
-.fondocontacto-mobile{
+.fondocontacto-mobile {
   display: none;
 }
 
@@ -177,7 +178,7 @@ body {
     animation: moveRightLeft 6s ease-in-out infinite;
   }
 
-  .fondocontacto-mobile{
+  .fondocontacto-mobile {
     display: block;
   }
 }
