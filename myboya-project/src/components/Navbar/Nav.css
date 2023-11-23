@@ -121,7 +121,7 @@ header .nav-btn {
         opacity: 1;
         z-index: 11;
     }
-    nav {
+    .listaprub {
         z-index: 10;
         position: fixed;
         top: 0;
@@ -133,7 +133,7 @@ header .nav-btn {
         align-items: center;
         justify-content: center;
         gap: 1.5rem;
-        background-color: var(--clr-blue);
+        background-color: #00214b;
         transition: 1s;
         transform: translateY(-100vh);  
         opacity: 100%;      
