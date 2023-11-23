@@ -143,6 +143,11 @@ display: flex;
 flex-direction: row;
 }
 
+.contenedor-insignia-padre{
+display: flex;
+flex-direction: row;
+}
+
 .contenedor-insignia{
 display: flex;
 flex-direction: column;
