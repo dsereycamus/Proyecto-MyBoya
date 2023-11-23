@@ -1,9 +1,9 @@
 import 'https://cdn.socket.io/4.7.2/socket.io.min.js'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 const socket = io('http://localhost:8074')
 
-const messages = document.getElementById('messages')
+/* const messages = document.getElementById('messages') */
   /* socket.on('chat message',async (msg) => {
     console.log('Mensaje recibido en el cliente: ', msg)
     const item = await `<li>${msg}</li>`
