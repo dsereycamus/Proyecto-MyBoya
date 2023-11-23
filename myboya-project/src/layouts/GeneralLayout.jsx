@@ -5,7 +5,8 @@ import Footer from "../components/Footer/Footer";
 const GeneralLayout = () => {
   return (
     <main>
-      {window.location.pathname !== '/new' && <Navbar />}
+      {/* {window.location.pathname !== '/new' && <Navbar />} */}
+      <Navbar />
       <div style={{ minHeight: "65vh" }}>
         <Outlet />
       </div>

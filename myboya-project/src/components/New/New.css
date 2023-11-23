@@ -1,11 +1,11 @@
 .boyacraft{
-  position: fixed;
+  position: absolute;
   z-index: 3;
   width: 100vw;
-  height: 100vh;
+  height: 87vh;
   user-select: none;
   overflow: hidden;
-  inset: 0;
+  bottom: 0;
 }
 .pointer{
   color: var(--clr-orange);
