@@ -45,3 +45,13 @@
 .chatai-form button{
   padding: 0em .65em;
 }
+.chatai-form ul{
+  max-width: 14.3rem;
+  max-height: 15rem;
+  background-color: rgba(0 0 0 / .3);
+  padding: .2em .65em;
+  overflow: hidden;
+}
+.chatai-form ul li {
+  list-style: none;
+}

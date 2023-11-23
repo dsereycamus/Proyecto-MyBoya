@@ -20,7 +20,7 @@ io.on('connection', (socket) => {
   })
   socket.on('chat message', async (msg) => {
     const completion = await apiGpt(msg)
-    console.log(completion)
+    io.emit('chat message', completion)
   })
 })
 
