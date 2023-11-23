@@ -2,8 +2,17 @@ import logo from "../../assets/Icons/logobg.png";
 import { useSession } from "../../context/useSession";
 import "./Nav.css";
 import { useNavigate, NavLink, Link } from "react-router-dom";
+import DehazeIcon from '@mui/icons-material/Dehaze';
+/* import CloseIcon from '@mui/icons-material/Close'; */
+import { useRef } from "react";
 
 const Navbar = () => {
+
+  const navRef =  useRef();
+  const showNav = () => {
+    navRef.current.classList.toggle("responsive-nav")
+  }
+
   const navigate = useNavigate();
   const { isLoggedIn, logout: logoutContext } = useSession();
 
@@ -19,7 +28,7 @@ const Navbar = () => {
           <img src={logo} alt="Logo MyBoya" />
         </Link>
       </div>
-      <nav>
+      <nav ref={navRef}>
         <ul className="listaNav">
           <li>
             <NavLink to="/">Inicio</NavLink>
@@ -31,7 +40,7 @@ const Navbar = () => {
             <NavLink to="/partners">Partners</NavLink>
           </li>
           <li>
-            <NavLink to ="/noticias">Noticia</NavLink>
+            <NavLink to="/noticias">Noticia</NavLink>
           </li>
           {isLoggedIn && (
             <li>
@@ -57,6 +66,9 @@ const Navbar = () => {
           </Link>
         </>
       )}
+      <button className="nav-btn" onClick={showNav}>
+        <DehazeIcon />
+      </button>
     </header>
   );
 };
